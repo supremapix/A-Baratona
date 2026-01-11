@@ -26,3 +26,12 @@ export interface Testimonial {
   content: string;
   stars: number;
 }
+
+export interface NewsItem {
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  image: string;
+  category: string;
+}
