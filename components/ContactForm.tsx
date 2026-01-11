@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { COMPANY_INFO } from '../constants';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  variant?: 'dark' | 'light'; // 'dark' = white text (for dark bg), 'light' = dark text (for light bg)
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ variant = 'dark' }) => {
   const [formData, setFormData] = useState({
     name: '',
     address: '',
@@ -15,16 +19,30 @@ const ContactForm: React.FC = () => {
     window.open(`https://wa.me/${COMPANY_INFO.whatsappRaw}?text=${text}`, '_blank');
   };
 
+  const isLightMode = variant === 'light';
+
+  // Dynamic classes based on variant
+  const labelClass = `block text-sm font-bold mb-2 ${isLightMode ? 'text-gray-800' : 'text-white'}`;
+  const inputContainerClass = "relative";
+  const iconClass = `fas fa-user absolute left-3 top-3.5 ${isLightMode ? 'text-gray-500' : 'text-gray-400'}`;
+  
+  const inputBaseClass = "w-full pl-10 pr-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-200 text-gray-800 placeholder-gray-500";
+  const inputThemeClass = isLightMode 
+    ? "bg-white border border-gray-300 shadow-sm hover:border-primary" 
+    : "bg-white border-none shadow-lg";
+
+  const footerTextClass = `text-xs text-center mt-3 flex items-center justify-center gap-1 ${isLightMode ? 'text-gray-600' : 'text-white/80'}`;
+
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    <form onSubmit={handleSubmit} className="space-y-5">
       <div>
-        <label className="block text-white text-sm font-bold mb-2">Seu Nome</label>
-        <div className="relative">
-          <i className="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+        <label className={labelClass}>Seu Nome</label>
+        <div className={inputContainerClass}>
+          <i className={`fas fa-user absolute left-3 top-3.5 ${isLightMode ? 'text-gray-500' : 'text-gray-400'}`}></i>
           <input 
             type="text" 
             required
-            className="w-full pl-10 pr-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-primary text-gray-800"
+            className={`${inputBaseClass} ${inputThemeClass}`}
             placeholder="João Silva"
             value={formData.name}
             onChange={e => setFormData({...formData, name: e.target.value})}
@@ -33,14 +51,14 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label className="block text-white text-sm font-bold mb-2">Endereço de Entrega</label>
-        <div className="relative">
-          <i className="fas fa-map-marker-alt absolute left-3 top-3 text-gray-400"></i>
+        <label className={labelClass}>Endereço de Entrega</label>
+        <div className={inputContainerClass}>
+          <i className={`fas fa-map-marker-alt absolute left-3 top-3.5 ${isLightMode ? 'text-gray-500' : 'text-gray-400'}`}></i>
           <input 
             type="text" 
             required
-            className="w-full pl-10 pr-4 py-3 rounded-lg border-none focus:ring-2 focus:ring-primary text-gray-800"
-            placeholder="Rua, Bairro..."
+            className={`${inputBaseClass} ${inputThemeClass}`}
+            placeholder="Rua, Bairro e Número"
             value={formData.address}
             onChange={e => setFormData({...formData, address: e.target.value})}
           />
@@ -48,14 +66,20 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label className="block text-white text-sm font-bold mb-2">Tamanho da Caçamba</label>
+        <label className={labelClass}>Tamanho da Caçamba</label>
         <div className="grid grid-cols-3 gap-2">
           {['3m³', '5m³', '8m³'].map(s => (
             <button
               key={s}
               type="button"
               onClick={() => setFormData({...formData, size: s})}
-              className={`py-2 rounded-lg font-bold transition-all ${formData.size === s ? 'bg-primary text-white ring-2 ring-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`}
+              className={`py-3 rounded-lg font-bold transition-all shadow-md ${
+                formData.size === s 
+                  ? 'bg-primary text-white ring-2 ring-primary ring-offset-2' 
+                  : isLightMode 
+                    ? 'bg-white text-gray-600 hover:bg-gray-50 border border-gray-200' 
+                    : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
             >
               {s}
             </button>
@@ -65,12 +89,12 @@ const ContactForm: React.FC = () => {
 
       <button 
         type="submit"
-        className="w-full bg-[#25D366] hover:bg-green-600 text-white font-extrabold py-4 rounded-lg shadow-lg transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2"
+        className="w-full bg-[#25D366] hover:bg-green-600 text-white font-extrabold py-4 rounded-lg shadow-lg transform hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group"
       >
-        <i className="fab fa-whatsapp text-2xl"></i> PEDIR AGORA
+        <i className="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i> PEDIR AGORA
       </button>
-      <p className="text-white/70 text-xs text-center mt-2">
-        <i className="fas fa-bolt text-yellow-400"></i> Resposta média: 2 minutos
+      <p className={footerTextClass}>
+        <i className="fas fa-bolt text-yellow-500"></i> Resposta média: 2 minutos
       </p>
     </form>
   );

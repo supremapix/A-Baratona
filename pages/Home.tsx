@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                   Orçamento Expresso <span className="text-primary">Online</span>
                 </h3>
                 <div className="relative z-10">
-                   <ContactForm />
+                   <ContactForm variant="light" />
                 </div>
               </div>
             </div>
