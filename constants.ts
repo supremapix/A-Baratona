@@ -178,7 +178,7 @@ export const NEIGHBORHOODS_LIST = [
   "Vila Verde", "Vila São José", "Vila Santa Helena", "Vila Industrial", "Vila Conquista", 
   "Vila União", "Vila Nova Esperança", "Vila Osternack", "Vila Nova", "Vila São Domingos", 
   "Vila Audi União", "Vila Becker", "Vila Copel", "Vila Eletrosul", "Vila Trabalhador", 
-  "Vila São Miguel", "Vila Santo Antônio", "Vila Verde II", "Vila Verde III", "Vila Verde IV", 
+  "Vila São João", "Vila São Miguel", "Vila Santo Antônio", "Vila Verde II", "Vila Verde III", "Vila Verde IV", 
   "Vila Verde V", "Vila Nova Primavera", "Vila Araucária", "Vila Concórdia", "Vila São Judas Tadeu", 
   "Vila São Mateus", "Vila São Pedro", "Vila São Marcos", "Vila São Paulo", "Vila Barigui", 
   "Vila Reno", "Vila Formosa", "Vila Sandra", "Vila Pantanal", "Neo Ville", "Conjunto Caiuá", 
