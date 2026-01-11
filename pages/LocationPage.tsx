@@ -5,6 +5,7 @@ import { getLocationBySlug, generateLocationContent } from '../utils/seoHelper';
 import ContactForm from '../components/ContactForm';
 import { COMPANY_INFO, IMAGES } from '../constants';
 import NotFound from './NotFound';
+import PageTransition from '../components/PageTransition';
 
 const LocationPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -23,7 +24,7 @@ const LocationPage: React.FC = () => {
   const content = generateLocationContent(location);
 
   return (
-    <>
+    <PageTransition>
       <Helmet>
         {/* Basic SEO */}
         <title>{content.title}</title>
@@ -178,7 +179,7 @@ const LocationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </PageTransition>
   );
 };
 

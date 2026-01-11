@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react
 import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import LocationPage from './pages/LocationPage';
+import ContactPage from './pages/ContactPage';
 import NotFound from './pages/NotFound';
 import FloatingButtons from './components/FloatingButtons';
 import Footer from './components/Footer';
@@ -61,7 +62,7 @@ const Layout: React.FC = () => {
             <NavLink to="/">Início</NavLink>
             <NavLink to="/?scrollTo=precos">Preços</NavLink>
             <NavLink to="/?scrollTo=locais">Cidades</NavLink>
-            <NavLink to="/?scrollTo=contato">Contato</NavLink>
+            <NavLink to="/contato">Contato</NavLink>
             <a 
               href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`} 
               target="_blank"
@@ -92,7 +93,7 @@ const Layout: React.FC = () => {
             <NavLink to="/" onClick={toggleMenu}>Início</NavLink>
             <NavLink to="/?scrollTo=precos" onClick={toggleMenu}>Preços</NavLink>
             <NavLink to="/?scrollTo=locais" onClick={toggleMenu}>Cidades</NavLink>
-            <NavLink to="/?scrollTo=contato" onClick={toggleMenu}>Contato</NavLink>
+            <NavLink to="/contato" onClick={toggleMenu}>Contato</NavLink>
             
             <a 
               href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`}
@@ -114,6 +115,7 @@ const Layout: React.FC = () => {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contato" element={<ContactPage />} />
           <Route path="/:slug" element={<LocationPage />} />
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />

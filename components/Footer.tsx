@@ -5,7 +5,7 @@ import Logo from './Logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contato" className="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary">
+    <footer className="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="text-gray-400 hover:text-primary transition-colors">Início</Link></li>
               <li><Link to="/?scrollTo=precos" className="text-gray-400 hover:text-primary transition-colors">Preços</Link></li>
               <li><Link to="/?scrollTo=locais" className="text-gray-400 hover:text-primary transition-colors">Área de Atuação</Link></li>
-              <li><Link to="/?scrollTo=contato" className="text-gray-400 hover:text-primary transition-colors">Contato</Link></li>
+              <li><Link to="/contato" className="text-gray-400 hover:text-primary transition-colors">Contato</Link></li>
             </ul>
           </div>
 
