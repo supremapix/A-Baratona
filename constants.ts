@@ -24,7 +24,7 @@ export const HERO_SLIDES = [
   "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1600"
 ];
 
-// Updated Image Assets - Definitive Fix for Broken Links
+// Updated Image Assets - Definitive Fix for Broken Links with Premium Images
 export const IMAGES = {
   // Logo placeholder
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
@@ -32,16 +32,16 @@ export const IMAGES = {
   // Hero Background: Dark construction texture
   heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
   
-  // Truck: Frota Image - "Logística Própria" (Fixed broken link with premium truck image)
-  truck: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800", 
+  // Truck: Frota Image - "Logística Própria" (White/Silver modern dump truck)
+  truck: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", 
   
-  // Debris: Excavator/Rubble
+  // Debris: Excavator/Rubble - "Coleta de Resíduos" (Excavator loading truck)
   debris: "https://images.unsplash.com/photo-1526500599607-160869389230?auto=format&fit=crop&q=80&w=800", 
   
-  // Yellow Skip Bin: Main Service Image
+  // Yellow Skip Bin: Main Service Image - "Caçambas Padrão" (Yellow container)
   skipBin: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", 
   
-  // Excavator: Heavy machinery
+  // Excavator: Heavy machinery (Yellow Excavator)
   excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
   
   // Landfill/Environment
@@ -204,7 +204,8 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>Isso nos permite cumprir rigorosamente o prazo de "entrega em até 2 horas" para bairros selecionados, pois conseguimos despachar o caminhão mais próximo da sua localização instantaneamente. É a tecnologia trabalhando a favor do cronograma da sua obra!</p>
     `,
     date: "05 Jan 2025",
-    image: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC", // Fleet
+    // Modern truck on the road - symbolizes new fleet and technology
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=800", 
     category: "Institucional"
   },
   {
