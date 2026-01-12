@@ -10,22 +10,21 @@ export const COMPANY_INFO = {
   mapCoords: { lat: -25.467977, lng: -49.248827 }
 };
 
-// Slider Images for Hero Section
+// Slider Images for Hero Section - Updated with Real Assets
 export const HERO_SLIDES = [
-  // 1. General Construction / Worker
+  // 1. Frota / Fleet (Image 3)
+  "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png",
+  // 2. Operation / Excavator (Image 2)
+  "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png",
+  // 3. Trucks and Bins (Image 1)
+  "https://file-service-full-build-prod.s3.amazonaws.com/1/d712e02b-8763-4796-af1c-598d94943b17.png",
+  // 4. Fallback generic
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-  // 2. Skip Bin / Container specific
-  "https://images.unsplash.com/photo-1591955506264-3f5129538638?q=80&w=2070&auto=format&fit=crop",
-  // 3. Rubble / Demolition / Action
-  "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop",
-  // 4. Heavy Machinery / Excavator
-  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop",
-  // 5. Site / Building / Structure
-  "https://images.unsplash.com/photo-1531834685032-c34bf0d84c7c?q=80&w=1997&auto=format&fit=crop"
+  // 5. Fallback generic
+  "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop"
 ];
 
-// High Reliability Placeholders (Emulating Images) to prevent broken links
-// Using Placehold.co with brand colors (Orange #FF6B00, Dark #1A1A1A)
+// Updated Image Assets
 export const IMAGES = {
   // Logo placeholder (though used as component mostly)
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
@@ -33,17 +32,17 @@ export const IMAGES = {
   // Hero Background: Dark themed construction placeholder
   heroBg: "https://placehold.co/1920x1080/1A1A1A/FF6B00?text=Obras+em+Curitiba+e+Regi%C3%A3o&font=roboto", 
   
-  // Truck: Dark background with Orange text
-  truck: "https://placehold.co/800x600/1A1A1A/FF6B00?text=Frota+Pr%C3%B3pria+Baratona&font=oswald", 
+  // Truck: Frota Image
+  truck: "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png", 
   
-  // Debris: Grey background for rubble context
-  debris: "https://placehold.co/800x600/4a4a4a/ffffff?text=Coleta+de+Entulho+e+Res%C3%ADduos&font=oswald", 
+  // Debris: Excavator Image
+  debris: "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png", 
   
-  // Yellow Skip Bin: Orange/Yellow background to match "Caçamba Amarela"
-  skipBin: "https://placehold.co/800x600/FF6B00/ffffff?text=Ca%C3%A7ambas+3m%C2%B3+5m%C2%B3+e+8m%C2%B3&font=oswald", 
+  // Yellow Skip Bin: Trucks and Bins Image
+  skipBin: "https://file-service-full-build-prod.s3.amazonaws.com/1/d712e02b-8763-4796-af1c-598d94943b17.png", 
   
-  // Excavator: Heavy machinery placeholder
-  excavator: "https://placehold.co/800x600/222222/FF6B00?text=M%C3%A1quinas+e+Terraplanagem&font=oswald",
+  // Excavator: Heavy machinery (Reusing Image 2)
+  excavator: "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png",
   
   // Landfill/Environment
   landfill: "https://placehold.co/800x600/2E8B57/ffffff?text=Descarte+Ecol%C3%B3gico&font=roboto",
