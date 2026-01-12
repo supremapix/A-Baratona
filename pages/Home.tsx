@@ -211,7 +211,8 @@ const Home: React.FC = () => {
                   {/* Background Emulation (Fallback) */}
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black z-0">
                       <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
-                      <i className="fas fa-truck text-9xl text-white/5 absolute -right-4 -bottom-4 transform -rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
+                      {/* UPDATED ICON: Top Left Position and Higher Opacity */}
+                      <i className="fas fa-truck text-9xl text-white/10 absolute -left-4 -top-4 transform -rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
                   </div>
                   
                   {/* Image Layer */}
