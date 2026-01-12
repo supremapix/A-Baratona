@@ -10,45 +10,41 @@ export const COMPANY_INFO = {
   mapCoords: { lat: -25.467977, lng: -49.248827 }
 };
 
-// Slider Images for Hero Section - Updated with Real Assets
+// Slider Images for Hero Section - Updated to 3 specific themes requested
 export const HERO_SLIDES = [
-  // 1. Frota / Fleet
-  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=2070",
-  // 2. Operation / Excavator
-  "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=2070",
-  // 3. Trucks and Bins
+  // 1. Entulhos de obras (Construction Debris/Site)
+  "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=2070",
+  // 2. Caçambas estacionárias (Stationary Skips/Dumpsters)
   "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=2070",
-  // 4. Construction Site
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-  // 5. Urban Construction
-  "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop"
+  // 3. Caminhão de caçambas (Skip Truck)
+  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=2070"
 ];
 
-// Updated Image Assets
+// Updated Image Assets - Definitive Fix (No more placeholders)
 export const IMAGES = {
-  // Logo placeholder (though used as component mostly)
+  // Logo placeholder (Keep strictly for layout stability if SVG logo isn't available, but usually Logo.tsx handles branding)
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
   
-  // Hero Background: Dark themed construction placeholder
-  heroBg: "https://placehold.co/1920x1080/1A1A1A/FF6B00?text=Obras+em+Curitiba+e+Regi%C3%A3o&font=roboto", 
+  // Hero Background: Dark themed construction texture (Real image)
+  heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
   
-  // Truck: Frota Image - White Truck similar to brand
+  // Truck: Frota Image - Robust White Truck
   truck: "https://images.unsplash.com/photo-1591799265444-d66432b91592?auto=format&fit=crop&q=80&w=800", 
   
-  // Debris: Excavator Image / Rubble
+  // Debris: Excavator/Rubble
   debris: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=800", 
   
-  // Yellow Skip Bin: Trucks and Bins Image
+  // Yellow Skip Bin: Main Service Image
   skipBin: "https://images.unsplash.com/photo-1610450829878-55734358896c?auto=format&fit=crop&q=80&w=800", 
   
-  // Excavator: Heavy machinery (Reusing Image 2)
+  // Excavator: Heavy machinery
   excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
   
   // Landfill/Environment
   landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
   
-  // Mascot
-  mascot: "https://placehold.co/300x300/FF6B00/ffffff?text=Rei+da+Ca%C3%A7amba&font=roboto",
+  // Mascot: Friendly Construction Worker (Real person instead of placeholder)
+  mascot: "https://images.unsplash.com/photo-1540397106260-e24a59409240?auto=format&fit=crop&q=80&w=300",
 };
 
 export const PRICING: PricingTier[] = [
