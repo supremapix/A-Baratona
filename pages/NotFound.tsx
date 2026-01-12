@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IMAGES } from '../constants';
 import PageTransition from '../components/PageTransition';
+import AnimatedAlertIcon from '../components/AnimatedAlertIcon';
 
 const NotFound: React.FC = () => {
   return (
@@ -10,11 +10,8 @@ const NotFound: React.FC = () => {
         <div className="max-w-md w-full">
           <div className="mb-8 relative">
              <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
-             <img 
-               src={IMAGES.mascot} 
-               alt="Rei da Caçamba" 
-               className="w-40 h-40 mx-auto rounded-full border-4 border-primary shadow-2xl relative z-10 bg-white" 
-             />
+             {/* REPLACED IMAGE WITH ANIMATED ICON (Larger Size) */}
+             <AnimatedAlertIcon size="xl" />
           </div>
           
           <h1 className="text-8xl font-black text-primary mb-2">404</h1>

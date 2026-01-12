@@ -10,6 +10,7 @@ import VerticalTestimonials from '../components/VerticalTestimonials';
 import NewsCarousel from '../components/NewsCarousel';
 import PageTransition from '../components/PageTransition';
 import VideoSection from '../components/VideoSection';
+import AnimatedAlertIcon from '../components/AnimatedAlertIcon';
 
 const Home: React.FC = () => {
   const location = useLocation();
@@ -173,7 +174,10 @@ const Home: React.FC = () => {
                   {/* CTA Box */}
                   <div className="mt-8 bg-secondary rounded-2xl p-8 text-white text-center relative overflow-hidden shadow-2xl">
                       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10"></div>
-                      <img src={IMAGES.mascot} alt="Mascote Rei da Caçamba" className="w-28 h-28 rounded-full mx-auto border-4 border-primary -mt-14 mb-4 shadow-lg bg-white object-cover" />
+                      
+                      {/* REPLACED IMAGE WITH ANIMATED ICON */}
+                      <AnimatedAlertIcon size="lg" />
+                      
                       <h4 className="text-2xl font-bold text-primary mb-2">Precisando de Ajuda?</h4>
                       <p className="mb-6 text-sm text-gray-300">Mande uma foto do seu entulho no Zap e nós calculamos para você!</p>
                       <a href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`} className="inline-block w-full bg-[#25D366] py-4 rounded-xl font-bold hover:bg-green-500 transition-colors shadow-lg hover:shadow-green-500/50">
