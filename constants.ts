@@ -12,15 +12,15 @@ export const COMPANY_INFO = {
 
 // Slider Images for Hero Section - Updated with Real Assets
 export const HERO_SLIDES = [
-  // 1. Frota / Fleet (Image 3)
-  "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png",
-  // 2. Operation / Excavator (Image 2)
-  "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png",
-  // 3. Trucks and Bins (Image 1)
-  "https://file-service-full-build-prod.s3.amazonaws.com/1/d712e02b-8763-4796-af1c-598d94943b17.png",
-  // 4. Fallback generic
+  // 1. Frota / Fleet
+  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=2070",
+  // 2. Operation / Excavator
+  "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=2070",
+  // 3. Trucks and Bins
+  "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=2070",
+  // 4. Construction Site
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070&auto=format&fit=crop",
-  // 5. Fallback generic
+  // 5. Urban Construction
   "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?q=80&w=2070&auto=format&fit=crop"
 ];
 
@@ -32,17 +32,17 @@ export const IMAGES = {
   // Hero Background: Dark themed construction placeholder
   heroBg: "https://placehold.co/1920x1080/1A1A1A/FF6B00?text=Obras+em+Curitiba+e+Regi%C3%A3o&font=roboto", 
   
-  // Truck: Frota Image
-  truck: "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png", 
+  // Truck: Frota Image - White Truck similar to brand
+  truck: "https://images.unsplash.com/photo-1591799265444-d66432b91592?auto=format&fit=crop&q=80&w=800", 
   
-  // Debris: Excavator Image
-  debris: "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png", 
+  // Debris: Excavator Image / Rubble
+  debris: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=800", 
   
   // Yellow Skip Bin: Trucks and Bins Image
-  skipBin: "https://file-service-full-build-prod.s3.amazonaws.com/1/d712e02b-8763-4796-af1c-598d94943b17.png", 
+  skipBin: "https://images.unsplash.com/photo-1610450829878-55734358896c?auto=format&fit=crop&q=80&w=800", 
   
   // Excavator: Heavy machinery (Reusing Image 2)
-  excavator: "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png",
+  excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
   
   // Landfill/Environment
   landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
@@ -156,7 +156,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>É a tecnologia trabalhando a favor da sua obra!</p>
     `,
     date: "05 Jan 2025",
-    image: "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png", // Fleet
+    image: "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=800", // Fleet (Truck)
     category: "Institucional"
   },
   {
