@@ -10,41 +10,42 @@ export const COMPANY_INFO = {
   mapCoords: { lat: -25.467977, lng: -49.248827 }
 };
 
-// Slider Images for Hero Section - Mixed Official Branded Images + High Quality Unsplash
+// Slider Images for Hero Section - 5 Premium Images
 export const HERO_SLIDES = [
-  // Official Branded Images
-  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-9r7i7PuvyS6R7X6oGkG5uD", // Excavator loading truck
-  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-75N75t3nKj8r9Z8kCqG5wD", // Blue truck with skips
-  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC", // Fleet lined up
-  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-4r8i8PuvyS6R7X6oGkG5uE", // Red truck loading
-  
-  // Supplementary High-Quality Stock
-  "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?auto=format&fit=crop&q=80&w=1600",
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600"
+  // 1. Caminhão moderno em movimento (Modern Truck)
+  "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&q=80&w=1600",
+  // 2. Canteiro de obras com céu azul (Construction Site)
+  "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1600",
+  // 3. Detalhe de caçamba/entulho (Dumpster/Rubble)
+  "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=1600",
+  // 4. Escavadeira carregando caminhão (Excavator Action)
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600",
+  // 5. Profissional/Engenheiro na obra (Human Element)
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=1600"
 ];
 
-// Updated Image Assets - Using Official Branded Images where appropriate
+// Updated Image Assets - Definitive Fix for Broken Links
 export const IMAGES = {
   // Logo placeholder
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
   
-  // Hero Background: Using the high-quality excavator shot for headers
-  heroBg: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-9r7i7PuvyS6R7X6oGkG5uD", 
+  // Hero Background: Dark construction texture
+  heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
   
-  // Truck: Frota Image - "Logística Própria" (Official Blue Truck)
-  truck: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-75N75t3nKj8r9Z8kCqG5wD", 
+  // Truck: Frota Image - "Logística Própria" (Fixed broken link with premium truck image)
+  truck: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&q=80&w=800", 
   
-  // Debris: Excavator/Rubble (Stock is cleaner for this specific icon-like usage, but we can use the branded red truck too)
+  // Debris: Excavator/Rubble
   debris: "https://images.unsplash.com/photo-1526500599607-160869389230?auto=format&fit=crop&q=80&w=800", 
   
-  // Yellow Skip Bin: Main Service Image (Stock is very clear for "just a bin")
+  // Yellow Skip Bin: Main Service Image
   skipBin: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", 
   
-  // Excavator: Heavy machinery (Official Red Truck/Excavator scene)
-  excavator: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-4r8i8PuvyS6R7X6oGkG5uE",
+  // Excavator: Heavy machinery
+  excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
   
-  // Landfill/Environment (Using Fleet image for scale)
-  landfill: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC",
+  // Landfill/Environment
+  landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
   
   // Mascot: Friendly Construction Worker - "Gostou das dicas?"
   mascot: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&q=80&w=400",
@@ -107,16 +108,32 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 1,
     slug: "novas-regras-descarte-residuos-curitiba",
-    title: "Novas regras para descarte de resíduos em Curitiba",
-    excerpt: "Confira o que mudou na legislação municipal sobre caçambas estacionárias e evite multas na sua obra.",
+    title: "Novas regras para descarte de resíduos em Curitiba: Guia Completo 2025",
+    excerpt: "Confira o que mudou na legislação municipal sobre caçambas estacionárias e evite multas na sua obra. Exigência de CTR e novas regras de sinalização.",
     content: `
-      <p>A partir deste ano, a Prefeitura de Curitiba implementou novas diretrizes para o gerenciamento de resíduos da construção civil (RCC). O objetivo é aumentar a taxa de reciclagem e diminuir o descarte irregular em áreas de preservação.</p>
-      <h3>O que muda para quem aluga caçambas?</h3>
-      <p>Agora, é obrigatório que o gerador do resíduo (você, cliente) exija o CTR (Controle de Transporte de Resíduos) da empresa locadora. Este documento comprova que o entulho foi levado para um aterro ou usina de reciclagem licenciada.</p>
-      <p>Além disso, caçambas estacionadas em vias públicas devem seguir rigorosamente as normas de sinalização, com faixas reflexivas e identificação clara da empresa responsável.</p>
-      <h3>Multas mais pesadas</h3>
-      <p>O não cumprimento das normas pode gerar multas que variam de R$ 500,00 a R$ 50.000,00, dependendo da gravidade da infração e do volume de material descartado incorretamente.</p>
-      <p><strong>A Baratona Caçambas já está 100% adequada às novas normas.</strong> Ao contratar nossos serviços, você tem a garantia de destinação correta e documentação em dia.</p>
+      <p class="lead">A gestão de resíduos sólidos é um dos grandes desafios das metrópoles modernas, e Curitiba, reconhecida como capital ecológica, não poderia ficar para trás. A partir deste ano, a Prefeitura implementou novas diretrizes para o gerenciamento de resíduos da construção civil (RCC), visando aumentar a sustentabilidade e a organização urbana.</p>
+      
+      <h3>O que muda na prática para quem aluga caçambas?</h3>
+      <p>A principal mudança é a rastreabilidade total do resíduo. Agora, é obrigatório que o gerador do resíduo (você, cliente) exija o <strong>CTR (Controle de Transporte de Resíduos)</strong> da empresa locadora. Este documento funciona como uma "nota fiscal" do entulho, comprovando que ele foi levado para um aterro ou usina de reciclagem licenciada pelo IAP (Instituto Ambiental do Paraná).</p>
+      <p>Sem esse documento, sua obra pode ser embargada e você pode ser responsabilizado solidariamente caso o entulho seja encontrado em locais irregulares, como terrenos baldios ou margens de rios.</p>
+
+      <h3>Sinalização e Segurança</h3>
+      <p>Além da documentação, as regras visuais ficaram mais rígidas. Caçambas estacionadas em vias públicas devem seguir rigorosamente as normas de sinalização:</p>
+      <ul>
+        <li>Faixas reflexivas em todas as laterais e bordas superiores.</li>
+        <li>Identificação clara da empresa responsável com telefone de contato visível.</li>
+        <li>Estacionamento permitido apenas em locais regulamentados (não pode bloquear hidrantes, garagens ou esquinas).</li>
+      </ul>
+
+      <h3>Multas mais pesadas para infratores</h3>
+      <p>O não cumprimento das normas pode gerar multas que variam de <strong>R$ 500,00 a R$ 50.000,00</strong>, dependendo da gravidade da infração e do volume de material descartado incorretamente. A fiscalização foi intensificada com o uso de denúncias via central 156.</p>
+      
+      <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-primary my-6">
+        <h4 class="font-bold text-secondary mb-2">Compromisso A Baratona</h4>
+        <p class="text-sm">A Baratona Caçambas já está 100% adequada às novas normas de 2025. Ao contratar nossos serviços, você tem a garantia de destinação correta, emissão de CTR e equipamentos sinalizados conforme a lei. Não corra riscos!</p>
+      </div>
+
+      <p>Planeje sua obra com segurança jurídica e ambiental. Conte conosco para fazer o descarte certo.</p>
     `,
     date: "15 Jan 2025",
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800", // Legislation/Document
@@ -125,17 +142,39 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 2,
     slug: "como-calcular-tamanho-cacamba-ideal",
-    title: "Como calcular o tamanho da caçamba ideal?",
-    excerpt: "Guia completo para você não desperdiçar dinheiro pedindo uma caçamba muito grande ou muito pequena.",
+    title: "Como calcular o tamanho da caçamba ideal para sua obra?",
+    excerpt: "Guia completo para você não desperdiçar dinheiro. Saiba quando pedir uma caçamba de 3m³, 5m³ ou 8m³ e economize no orçamento.",
     content: `
-      <p>Escolher o tamanho certo da caçamba é fundamental para economizar na sua obra. Pedir uma caçamba muito pequena pode exigir uma segunda locação, dobrando o custo. Pedir uma muito grande é desperdício de espaço.</p>
-      <h3>Caçamba de 3m³ (Pequena)</h3>
-      <p>Ideal para pequenas reformas, como troca de pisos de um cômodo, pequenas demolições de paredes não estruturais ou limpeza de jardins. Equivale a aproximadamente 40 carrinhos de mão.</p>
-      <h3>Caçamba de 5m³ (Média - A mais popular)</h3>
-      <p>A mais utilizada em reformas residenciais completas. Comporta entulho de demolição de paredes, troca de telhados de médio porte e reformas de banheiros e cozinhas. Equivale a cerca de 70 a 80 carrinhos de mão.</p>
-      <h3>Caçamba de 8m³ (Grande)</h3>
-      <p>Indicada para grandes obras, construções desde o alicerce ou grandes demolições. É a melhor opção para construtoras e empreiteiros que geram muito volume rapidamente. Atenção: devido ao peso, em alguns casos só pode ser usada para materiais leves (madeira, plástico, gesso).</p>
-      <p>Na dúvida, envie uma foto do seu entulho para nosso WhatsApp e nossa equipe ajuda a calcular!</p>
+      <p class="lead">Escolher o tamanho certo da caçamba é fundamental para economizar na sua obra. Pedir uma caçamba muito pequena pode exigir uma segunda locação, dobrando o custo logístico. Pedir uma muito grande é desperdício de espaço e dinheiro.</p>
+      
+      <h3>Entendendo as Medidas</h3>
+      <p>Para facilitar, imagine o volume em "carrinhos de mão" de obra padrão. Essa é uma medida prática que ajuda mestres de obras e pedreiros a estimar o volume.</p>
+
+      <h4>Caçamba de 3m³ (Pequena)</h4>
+      <p>Ideal para pequenas reformas ou limpezas pontuais. É compacta e cabe em vagas menores.</p>
+      <ul>
+        <li><strong>Capacidade:</strong> Aproximadamente 40 a 50 carrinhos de mão.</li>
+        <li><strong>Uso comum:</strong> Troca de pisos de um cômodo, pequenas demolições de paredes não estruturais, limpeza de jardins e garagens.</li>
+      </ul>
+
+      <h4>Caçamba de 5m³ (Média - A mais popular)</h4>
+      <p>É o modelo padrão de mercado, o "fiel da balança" para a maioria das obras residenciais.</p>
+      <ul>
+        <li><strong>Capacidade:</strong> Cerca de 70 a 80 carrinhos de mão.</li>
+        <li><strong>Uso comum:</strong> Reformas de banheiros e cozinhas completas, troca de telhados de médio porte, demolição de múltiplas paredes internas.</li>
+      </ul>
+
+      <h4>Caçamba de 8m³ (Grande)</h4>
+      <p>Indicada para grandes geradores e obras pesadas. Atenção ao peso do material!</p>
+      <ul>
+        <li><strong>Capacidade:</strong> Mais de 120 carrinhos de mão.</li>
+        <li><strong>Uso comum:</strong> Construções desde o alicerce, grandes demolições, limpeza de terrenos com muito mato/madeira.</li>
+        <li><strong>Importante:</strong> Para entulho muito pesado (apenas concreto/terra), verifique com a locadora se o caminhão suporta o peso de uma caçamba de 8m³ cheia, ou se é melhor dividir em duas de 4m³ ou 5m³.</li>
+      </ul>
+
+      <h3>Dica de Ouro: A "Montanha" de Entulho</h3>
+      <p>Lembre-se que o entulho solto ocupa mais espaço do que o material compactado na parede. Uma parede de tijolos, ao ser demolida, gera um volume de entulho cerca de 30% a 50% maior devido aos espaços vazios entre os pedaços.</p>
+      <p>Na dúvida, envie uma foto do seu entulho ou da área a ser demolida para nosso WhatsApp. Nossa equipe tem experiência visual e pode ajudar a calcular o tamanho ideal!</p>
     `,
     date: "10 Jan 2025",
     image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800", // Calculator
@@ -144,15 +183,25 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 3,
     slug: "a-baratona-renova-frota-2025",
-    title: "A Baratona renova frota de caminhões em 2025",
-    excerpt: "Investimento em tecnologia e sustentabilidade para garantir entregas ainda mais rápidas em Curitiba.",
+    title: "A Baratona renova frota de caminhões em 2025: Tecnologia e Sustentabilidade",
+    excerpt: "Investimento em tecnologia Euro 6 e sistemas hidráulicos modernos para garantir entregas ainda mais rápidas e limpas em Curitiba.",
     content: `
-      <p>Comprometida com a eficiência e a sustentabilidade, a A Baratona Caçambas anuncia a renovação de sua frota para 2025. Adquirimos novos caminhões equipados com tecnologia Euro 6, que emitem significativamente menos poluentes na atmosfera.</p>
-      <h3>Mais agilidade na entrega</h3>
-      <p>Os novos veículos possuem sistemas hidráulicos mais modernos, permitindo que a colocação e retirada das caçambas seja feita em questão de minutos. Isso reduz o tempo de bloqueio da via e agiliza o serviço para o cliente.</p>
-      <h3>Rastreamento em tempo real</h3>
-      <p>Toda a nova frota é equipada com GPS de alta precisão. Isso permite que nossa central de operações monitore cada entrega e retirada, garantindo que o prazo de "entrega em até 2 horas" seja cumprido rigorosamente.</p>
-      <p>É a tecnologia trabalhando a favor da sua obra!</p>
+      <p class="lead">Comprometida com a eficiência operacional e a sustentabilidade ambiental, a A Baratona Caçambas tem o orgulho de anunciar a renovação completa de sua frota para o ano de 2025.</p>
+      
+      <h3>Tecnologia Euro 6: Menos Poluição</h3>
+      <p>Adquirimos novos caminhões equipados com tecnologia de motores Euro 6. Este padrão internacional exige uma redução drástica na emissão de gases poluentes, como óxidos de nitrogênio (NOx) e material particulado. Ao contratar A Baratona, você indiretamente contribui para um ar mais limpo em Curitiba.</p>
+
+      <h3>Sistemas Hidráulicos de Alta Performance</h3>
+      <p>A agilidade é nosso sobrenome. Os novos veículos possuem sistemas de "poliguindaste" mais modernos e robustos. O que isso significa para você?</p>
+      <ul>
+        <li><strong>Rapidez:</strong> A colocação e retirada das caçambas é feita em questão de minutos (média de 3 a 5 minutos).</li>
+        <li><strong>Segurança:</strong> Estabilizadores melhores garantem que a caçamba seja pousada suavemente, sem danificar calçadas ou pisos sensíveis.</li>
+        <li><strong>Menor Bloqueio:</strong> O tempo de manobra é reduzido, atrapalhando menos o trânsito na sua rua.</li>
+      </ul>
+
+      <h3>Rastreamento e Logística 4.0</h3>
+      <p>Toda a nova frota é equipada com GPS de alta precisão e telemetria. Nossa central de operações monitora cada entrega em tempo real.</p>
+      <p>Isso nos permite cumprir rigorosamente o prazo de "entrega em até 2 horas" para bairros selecionados, pois conseguimos despachar o caminhão mais próximo da sua localização instantaneamente. É a tecnologia trabalhando a favor do cronograma da sua obra!</p>
     `,
     date: "05 Jan 2025",
     image: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC", // Fleet
@@ -161,16 +210,24 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 4,
     slug: "dicas-economizar-reforma",
-    title: "Dicas para economizar na reforma da sua casa",
-    excerpt: "Planejamento é tudo. Veja como organizar o cronograma da sua obra e reduzir o desperdício de materiais.",
+    title: "4 Dicas infalíveis para economizar na reforma da sua casa",
+    excerpt: "Planejamento é tudo. Veja como organizar o cronograma da sua obra, evitar desperdícios e manter o orçamento sob controle.",
     content: `
-      <p>Reformar é realizar um sonho, mas sem planejamento pode virar um pesadelo financeiro. Confira 4 dicas essenciais para manter o orçamento sob controle.</p>
-      <ol>
-        <li><strong>Tenha um projeto:</strong> Não comece a quebrar nada sem saber exatamente como vai ficar. Mudanças de ideia no meio da obra são as maiores causadoras de prejuízo.</li>
-        <li><strong>Compre materiais com antecedência:</strong> Aproveite promoções e evite comprar tudo na última hora, quando você não tem tempo de pesquisar preços.</li>
-        <li><strong>Contrate mão de obra qualificada:</strong> "O barato sai caro". Um profissional ruim pode desperdiçar material e fazer serviços que precisarão ser refeitos.</li>
-        <li><strong>Gerencie o entulho:</strong> Manter a obra limpa aumenta a produtividade. Alugar uma caçamba e fazer a retirada programada evita acúmulo de sujeira que atrapalha os trabalhadores.</li>
-      </ol>
+      <p class="lead">Reformar é realizar um sonho, mas sem o devido planejamento, pode virar um pesadelo financeiro. Estourar o orçamento é a regra, não a exceção, no Brasil. Mas você pode fugir dessa estatística com organização.</p>
+      
+      <h3>1. Tenha um Projeto Definido</h3>
+      <p>Não comece a quebrar nada sem saber exatamente como vai ficar. Mudanças de ideia no meio da obra são as maiores causadoras de prejuízo. "Já que estamos quebrando aqui, vamos aumentar ali" é a frase que acaba com suas economias. Defina o escopo e siga-o.</p>
+
+      <h3>2. Compre Materiais com Antecedência</h3>
+      <p>Aproveite promoções e evite comprar tudo na última hora. Quando você precisa de um piso "para hoje" porque o pedreiro está parado esperando, você perde o poder de negociação e paga mais caro pelo frete expresso. Faça um cronograma de compras alinhado com as fases da obra.</p>
+
+      <h3>3. Contrate Mão de Obra Qualificada</h3>
+      <p>O ditado "o barato sai caro" nunca foi tão verdadeiro. Um profissional ruim pode desperdiçar até 20% do material (cortes errados de piso, massa preparada em excesso que seca) e fazer serviços que precisarão ser refeitos em meses. Peça referências e veja obras anteriores.</p>
+
+      <h3>4. Gerencie o Entulho Inteligentemente</h3>
+      <p>Manter a obra limpa aumenta a produtividade. Um canteiro bagunçado esconde ferramentas, causa acidentes e desanima a equipe. Alugar uma caçamba e fazer a retirada programada evita acúmulo de sujeira.</p>
+      <p>Além disso, separar materiais recicláveis (papelão de embalagens, metais) pode gerar uma pequena renda extra ou facilitar a doação, reduzindo o volume que vai para a caçamba paga.</p>
+
       <p>Conte com a A Baratona para manter sua obra limpa e organizada com o melhor custo-benefício de Curitiba.</p>
     `,
     date: "28 Dez 2024",
@@ -180,25 +237,38 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 5,
     slug: "o-que-pode-nao-pode-cacamba",
-    title: "O que pode e o que não pode colocar na caçamba?",
-    excerpt: "Entenda a classificação de resíduos e saiba o que é proibido descartar em caçambas de entulho comuns.",
+    title: "O que pode e o que não pode colocar na caçamba de entulho?",
+    excerpt: "Evite multas e taxas extras. Entenda a classificação de resíduos e saiba o que é estritamente proibido descartar.",
     content: `
-      <p>Muitos clientes têm dúvidas sobre o que é permitido descartar nas caçambas estacionárias. O descarte incorreto pode gerar multas e até a recusa da retirada pela empresa, pois os aterros são rigorosos.</p>
-      <h3>✅ O QUE PODE:</h3>
-      <ul>
-        <li><strong>Resíduos Classe A:</strong> Tijolos, blocos, concreto, argamassa, areia e terra.</li>
-        <li><strong>Madeiras:</strong> Restos de construção, tábuas e compensados (em caçambas específicas ou mistas).</li>
-        <li><strong>Gesso:</strong> (Geralmente requer caçamba exclusiva ou separação, consulte-nos).</li>
-      </ul>
-      <h3>❌ O QUE NÃO PODE (PROIBIDO):</h3>
-      <ul>
-        <li><strong>Lixo Doméstico:</strong> Restos de comida, papel higiênico, fraldas.</li>
-        <li><strong>Resíduos Perigosos:</strong> Latas de tinta, solventes, óleos, graxas.</li>
-        <li><strong>Eletrônicos:</strong> Computadores, TVs, pilhas e baterias.</li>
-        <li><strong>Pneus e Amianto:</strong> Estes materiais exigem logística reversa específica.</li>
-        <li><strong>Lixo Hospitalar:</strong> Risco biológico grave.</li>
-      </ul>
-      <p>Tem dúvida sobre algum material? Entre em contato antes de jogar na caçamba!</p>
+      <p class="lead">Muitos clientes têm dúvidas sobre o que é permitido descartar nas caçambas estacionárias. O descarte incorreto pode gerar multas ambientais severas e até a recusa da retirada pela empresa, pois os aterros sanitários são rigorosos na triagem.</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+        <div class="bg-green-50 p-6 rounded-xl border border-green-200">
+          <h3 class="text-green-800 font-bold mb-4"><i class="fas fa-check-circle mr-2"></i> O QUE PODE (PERMITIDO)</h3>
+          <ul class="list-disc pl-5 text-gray-700 space-y-2">
+            <li><strong>Resíduos Classe A (Alvenaria):</strong> Tijolos, blocos cerâmicos, concreto, argamassa, areia e terra.</li>
+            <li><strong>Madeiras:</strong> Restos de construção, tábuas de caixaria, compensados (geralmente em caçambas mistas).</li>
+            <li><strong>Cerâmicas:</strong> Azulejos, pisos, porcelanatos, telhas de barro.</li>
+            <li><strong>Metais:</strong> Ferragens, arames (embora seja melhor reciclar separadamente).</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 p-6 rounded-xl border border-red-200">
+          <h3 class="text-red-800 font-bold mb-4"><i class="fas fa-times-circle mr-2"></i> O QUE NÃO PODE (PROIBIDO)</h3>
+          <ul class="list-disc pl-5 text-gray-700 space-y-2">
+            <li><strong>Lixo Doméstico/Orgânico:</strong> Restos de comida, papel higiênico, fraldas. Isso atrai vetores e causa mau cheiro.</li>
+            <li><strong>Resíduos Perigosos (Classe B/D):</strong> Latas de tinta líquida, solventes, óleos, graxas, vernizes.</li>
+            <li><strong>Eletrônicos:</strong> Computadores, TVs, pilhas e baterias.</li>
+            <li><strong>Pneus e Amianto:</strong> Telhas de amianto são tóxicas e exigem descarte especializado. Pneus acumulam água.</li>
+            <li><strong>Lixo Hospitalar:</strong> Risco biológico grave.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>E o Gesso?</h3>
+      <p>O gesso (drywall, placas de forro) é um caso especial. Ele não pode ser misturado com o entulho comum (Classe A) porque contamina o solo e dificulta a reciclagem da areia/pedra. Geralmente, ele deve ser enviado separado ou ensacado. <strong>Consulte-nos antes de colocar gesso na caçamba!</strong></p>
+
+      <p>Tem dúvida sobre algum material específico? Entre em contato pelo WhatsApp antes de jogar na caçamba e evite dores de cabeça!</p>
     `,
     date: "20 Dez 2024",
     image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", // Recycling

@@ -88,7 +88,7 @@ const Layout: React.FC = () => {
           {/* Mobile Menu Button - Styled */}
           <button 
             onClick={toggleMenu}
-            className={`md:hidden z-50 relative w-12 h-12 flex items-center justify-center rounded-full transition-colors ${isMobileMenuOpen ? 'text-secondary' : 'text-primary'}`}
+            className={`md:hidden z-[110] relative w-12 h-12 flex items-center justify-center rounded-full transition-colors focus:outline-none ${isMobileMenuOpen ? 'text-secondary' : 'text-primary'}`}
             aria-label={isMobileMenuOpen ? "Fechar Menu" : "Abrir Menu"}
           >
             <div className="w-6 h-5 flex flex-col justify-between">
@@ -99,28 +99,29 @@ const Layout: React.FC = () => {
           </button>
         </div>
 
-        {/* Improved Mobile Slide-Over Menu */}
+        {/* Improved Mobile Slide-Over Menu - High Z-Index to overlay header */}
         <div 
-          className={`fixed inset-0 z-40 flex justify-end md:hidden transition-opacity duration-300 ${
-            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+          className={`fixed inset-0 z-[100] flex justify-end md:hidden transition-visibility duration-300 ${
+            isMobileMenuOpen ? 'visible' : 'invisible pointer-events-none'
           }`}
         >
           {/* Backdrop */}
           <div 
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${
+               isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+            }`}
             onClick={toggleMenu}
           ></div>
 
           {/* Menu Drawer */}
           <div 
-             className={`relative w-4/5 max-w-sm bg-white h-full shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${
+             className={`relative w-[85%] max-w-sm bg-white h-full shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${
                isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
              }`}
           >
              {/* Drawer Header */}
-             <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+             <div className="h-20 flex items-center px-6 border-b border-gray-100 bg-gray-50">
                 <span className="text-secondary font-black italic tracking-tighter text-lg">A BARATONA</span>
-                {/* Close button handled by the fixed toggle outside, or add internal one if preferred */}
              </div>
 
              {/* Links */}
@@ -163,7 +164,7 @@ const Layout: React.FC = () => {
              </nav>
 
              {/* Footer / Actions */}
-             <div className="p-6 bg-gray-50 border-t border-gray-200 space-y-3">
+             <div className="p-6 bg-gray-50 border-t border-gray-200 space-y-3 pb-safe">
                 <a 
                   href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`}
                   className="w-full bg-[#25D366] text-white py-3 rounded-xl shadow-md flex items-center justify-center gap-2 font-bold hover:bg-green-600 transition-colors"
