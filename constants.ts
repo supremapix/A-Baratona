@@ -10,32 +10,32 @@ export const COMPANY_INFO = {
   mapCoords: { lat: -25.467977, lng: -49.248827 }
 };
 
-// Slider Images for Hero Section - Updated to 3 specific themes requested
+// Slider Images for Hero Section - Updated with fresh working URLs
 export const HERO_SLIDES = [
   // 1. Entulhos de obras (Construction Debris/Site)
-  "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=2070",
-  // 2. Caçambas estacionárias (Stationary Skips/Dumpsters)
-  "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=2070",
+  "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?auto=format&fit=crop&q=80&w=1600",
+  // 2. Caçambas estacionárias (Stationary Skips)
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600",
   // 3. Caminhão de caçambas (Skip Truck)
-  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=2070"
+  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=1600"
 ];
 
-// Updated Image Assets - Definitive Fix (No more placeholders)
+// Updated Image Assets - Definitive Fix for Broken Links
 export const IMAGES = {
-  // Logo placeholder (Keep strictly for layout stability if SVG logo isn't available, but usually Logo.tsx handles branding)
+  // Logo placeholder
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
   
-  // Hero Background: Dark themed construction texture (Real image)
+  // Hero Background: Dark construction texture
   heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
   
-  // Truck: Frota Image - Robust White Truck
-  truck: "https://images.unsplash.com/photo-1591799265444-d66432b91592?auto=format&fit=crop&q=80&w=800", 
+  // Truck: Frota Image - "Logística Própria" (White Skip Truck)
+  truck: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", 
   
   // Debris: Excavator/Rubble
-  debris: "https://images.unsplash.com/photo-1503708928676-1cb796a0891e?auto=format&fit=crop&q=80&w=800", 
+  debris: "https://images.unsplash.com/photo-1526500599607-160869389230?auto=format&fit=crop&q=80&w=800", 
   
   // Yellow Skip Bin: Main Service Image
-  skipBin: "https://images.unsplash.com/photo-1610450829878-55734358896c?auto=format&fit=crop&q=80&w=800", 
+  skipBin: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", 
   
   // Excavator: Heavy machinery
   excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
@@ -43,8 +43,8 @@ export const IMAGES = {
   // Landfill/Environment
   landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
   
-  // Mascot: Friendly Construction Worker (Real person instead of placeholder)
-  mascot: "https://images.unsplash.com/photo-1540397106260-e24a59409240?auto=format&fit=crop&q=80&w=300",
+  // Mascot: Friendly Construction Worker - "Gostou das dicas?"
+  mascot: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&q=80&w=400",
 };
 
 export const PRICING: PricingTier[] = [
