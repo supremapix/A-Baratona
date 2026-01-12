@@ -67,10 +67,21 @@ const LocationPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Mini Hero */}
-        <div className="relative overflow-hidden h-64 md:h-80 flex items-center justify-center">
-          <img src={IMAGES.heroBg} alt={`Caçambas em ${location.name}`} className="absolute inset-0 w-full h-full object-cover filter brightness-[0.2]" />
-          <div className="absolute inset-0 bg-primary/20"></div>
+        {/* Mini Hero with Design Emulation Fallback */}
+        <div className="relative overflow-hidden h-64 md:h-80 flex items-center justify-center bg-secondary">
+          {/* Design Emulation: Premium Gradient Background as fallback */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-gray-800 z-0"></div>
+          
+          <img 
+            src={IMAGES.heroBg} 
+            alt={`Caçambas em ${location.name}`} 
+            className="absolute inset-0 w-full h-full object-cover filter brightness-[0.3] transition-opacity duration-500 z-0" 
+            onError={(e) => {
+              // Fallback to hide broken image and show gradient
+              e.currentTarget.style.opacity = '0';
+            }}
+          />
+          <div className="absolute inset-0 bg-primary/20 z-0"></div>
           
           <div className="container mx-auto px-4 relative z-10 text-center">
             <span className="inline-block py-1 px-3 border border-white/30 rounded-full text-xs font-bold text-white uppercase tracking-widest mb-4 backdrop-blur-sm">
@@ -94,8 +105,17 @@ const LocationPage: React.FC = () => {
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-8 text-justify">{content.text1.content}</p>
                 
-                <div className="relative rounded-xl overflow-hidden mb-8 group h-64 shadow-md">
-                    <img src={IMAGES.skipBin} alt={`Caminhão de Caçamba em ${location.name}`} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                <div className="relative rounded-xl overflow-hidden mb-8 group h-64 shadow-md bg-gray-200">
+                    {/* Design Emulation for Service Image */}
+                    <img 
+                      src={IMAGES.skipBin} 
+                      alt={`Caminhão de Caçamba em ${location.name}`} 
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" 
+                      loading="lazy"
+                      onError={(e) => {
+                        e.currentTarget.src = "https://placehold.co/800x600/1a1a1a/FFF?text=A+Baratona+Ca%C3%A7ambas"; // Ultimate fallback
+                      }}
+                    />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                         <p className="text-white font-bold">Caçambas prontas para entrega em {location.name}</p>
                     </div>
@@ -174,7 +194,7 @@ const LocationPage: React.FC = () => {
                 </ul>
               </div>
               
-              <div className="rounded-2xl overflow-hidden shadow-lg h-64 relative group cursor-pointer">
+              <div className="rounded-2xl overflow-hidden shadow-lg h-64 relative group cursor-pointer bg-gray-200">
                  <img src={IMAGES.excavator} alt="Serviços Pesados" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                     <p className="text-white font-bold text-lg">Precisando de máquinas?</p>

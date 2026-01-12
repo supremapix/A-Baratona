@@ -10,38 +10,41 @@ export const COMPANY_INFO = {
   mapCoords: { lat: -25.467977, lng: -49.248827 }
 };
 
-// Slider Images for Hero Section - Updated with fresh working URLs
+// Slider Images for Hero Section - Mixed Official Branded Images + High Quality Unsplash
 export const HERO_SLIDES = [
-  // 1. Entulhos de obras (Construction Debris/Site)
+  // Official Branded Images
+  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-9r7i7PuvyS6R7X6oGkG5uD", // Excavator loading truck
+  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-75N75t3nKj8r9Z8kCqG5wD", // Blue truck with skips
+  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC", // Fleet lined up
+  "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-4r8i8PuvyS6R7X6oGkG5uE", // Red truck loading
+  
+  // Supplementary High-Quality Stock
   "https://images.unsplash.com/photo-1590674899505-1c5c41951f89?auto=format&fit=crop&q=80&w=1600",
-  // 2. Caçambas estacionárias (Stationary Skips)
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600",
-  // 3. Caminhão de caçambas (Skip Truck)
-  "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=1600"
+  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1600"
 ];
 
-// Updated Image Assets - Definitive Fix for Broken Links
+// Updated Image Assets - Using Official Branded Images where appropriate
 export const IMAGES = {
   // Logo placeholder
   logo: "https://placehold.co/172x64/FF6B00/ffffff?text=A+Baratona", 
   
-  // Hero Background: Dark construction texture
-  heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
+  // Hero Background: Using the high-quality excavator shot for headers
+  heroBg: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-9r7i7PuvyS6R7X6oGkG5uD", 
   
-  // Truck: Frota Image - "Logística Própria" (White Skip Truck)
-  truck: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&q=80&w=800", 
+  // Truck: Frota Image - "Logística Própria" (Official Blue Truck)
+  truck: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-75N75t3nKj8r9Z8kCqG5wD", 
   
-  // Debris: Excavator/Rubble
+  // Debris: Excavator/Rubble (Stock is cleaner for this specific icon-like usage, but we can use the branded red truck too)
   debris: "https://images.unsplash.com/photo-1526500599607-160869389230?auto=format&fit=crop&q=80&w=800", 
   
-  // Yellow Skip Bin: Main Service Image
+  // Yellow Skip Bin: Main Service Image (Stock is very clear for "just a bin")
   skipBin: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", 
   
-  // Excavator: Heavy machinery
-  excavator: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=800",
+  // Excavator: Heavy machinery (Official Red Truck/Excavator scene)
+  excavator: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-4r8i8PuvyS6R7X6oGkG5uE",
   
-  // Landfill/Environment
-  landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
+  // Landfill/Environment (Using Fleet image for scale)
+  landfill: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC",
   
   // Mascot: Friendly Construction Worker - "Gostou das dicas?"
   mascot: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&q=80&w=400",
@@ -152,7 +155,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>É a tecnologia trabalhando a favor da sua obra!</p>
     `,
     date: "05 Jan 2025",
-    image: "https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&q=80&w=800", // Fleet (Truck)
+    image: "https://file-service-b-dev.s3.us-east-2.amazonaws.com/file-service/file-2x6y6QtuyT5Q6W5nFjF4vC", // Fleet
     category: "Institucional"
   },
   {
