@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { NEWS_ITEMS } from '../constants';
 
 const NewsCarousel: React.FC = () => {
@@ -88,34 +89,36 @@ const NewsCarousel: React.FC = () => {
                 className="flex-shrink-0 px-3"
                 style={{ width: `${100 / itemsToShow}%` }}
               >
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 group/card border border-gray-100">
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={item.image} 
-                      alt={item.title} 
-                      className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
-                      {item.category}
+                <Link to={`/blog/${item.slug}`} className="block h-full">
+                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col hover:-translate-y-2 transition-transform duration-300 group/card border border-gray-100">
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-700"
+                      />
+                      <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                        {item.category}
+                      </div>
+                    </div>
+                    
+                    <div className="p-6 flex-grow flex flex-col">
+                      <div className="text-xs text-gray-400 mb-2 flex items-center gap-2">
+                        <i className="far fa-calendar-alt"></i>
+                        {item.date}
+                      </div>
+                      <h3 className="text-xl font-bold text-secondary mb-3 leading-tight group-hover/card:text-primary transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
+                        {item.excerpt}
+                      </p>
+                      <span className="inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider hover:underline mt-auto">
+                        Ler Mais <i className="fas fa-arrow-right ml-2 text-xs"></i>
+                      </span>
                     </div>
                   </div>
-                  
-                  <div className="p-6 flex-grow flex flex-col">
-                    <div className="text-xs text-gray-400 mb-2 flex items-center gap-2">
-                      <i className="far fa-calendar-alt"></i>
-                      {item.date}
-                    </div>
-                    <h3 className="text-xl font-bold text-secondary mb-3 leading-tight group-hover/card:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
-                      {item.excerpt}
-                    </p>
-                    <a href="#" className="inline-flex items-center text-primary font-bold text-sm uppercase tracking-wider hover:underline mt-auto">
-                      Ler Mais <i className="fas fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                  </div>
-                </div>
+                </Link>
               </div>
             ))}
          </div>

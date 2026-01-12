@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Home from './pages/Home';
 import LocationPage from './pages/LocationPage';
 import ContactPage from './pages/ContactPage';
+import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
 import FloatingButtons from './components/FloatingButtons';
 import Footer from './components/Footer';
@@ -37,6 +38,16 @@ const Layout: React.FC = () => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location]);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isMobileMenuOpen]);
 
   // Scroll to top if simply navigating to a new route without scroll params
   useEffect(() => {
@@ -73,42 +84,92 @@ const Layout: React.FC = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Styled */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-3xl text-secondary z-50 focus:outline-none w-10 h-10 flex items-center justify-center"
+            className={`md:hidden z-50 relative w-12 h-12 flex items-center justify-center rounded-full transition-colors ${isMobileMenuOpen ? 'text-secondary' : 'text-primary'}`}
             aria-label={isMobileMenuOpen ? "Fechar Menu" : "Abrir Menu"}
           >
-            <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}></i>
+            <div className="w-6 h-5 flex flex-col justify-between">
+                <span className={`h-0.5 w-full bg-current transform transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                <span className={`h-0.5 w-full bg-current transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <span className={`h-0.5 w-full bg-current transform transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
           </button>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Improved Mobile Slide-Over Menu */}
         <div 
-          className={`fixed inset-0 bg-white z-40 flex flex-col items-center justify-center transition-all duration-500 ease-in-out md:hidden ${
-            isMobileMenuOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full pointer-events-none'
+          className={`fixed inset-0 z-40 flex justify-end md:hidden transition-opacity duration-300 ${
+            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           }`}
         >
-          <nav className="flex flex-col items-center gap-8 text-2xl font-bold text-secondary uppercase tracking-widest">
-            <NavLink to="/" onClick={toggleMenu}>Início</NavLink>
-            <NavLink to="/?scrollTo=precos" onClick={toggleMenu}>Preços</NavLink>
-            <NavLink to="/?scrollTo=locais" onClick={toggleMenu}>Cidades</NavLink>
-            <NavLink to="/contato" onClick={toggleMenu}>Contato</NavLink>
-            
-            <a 
-              href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`}
-              className="mt-4 bg-[#25D366] text-white px-8 py-3 rounded-full shadow-xl flex items-center gap-3 text-lg"
-            >
-              <i className="fab fa-whatsapp"></i> Whatsapp
-            </a>
-            
-            <a 
-              href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`}
-              className="bg-black text-white px-8 py-3 rounded-full shadow-xl flex items-center gap-3 text-lg"
-            >
-              <i className="fas fa-phone-alt"></i> Ligar Agora
-            </a>
-          </nav>
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={toggleMenu}
+          ></div>
+
+          {/* Menu Drawer */}
+          <div 
+             className={`relative w-4/5 max-w-sm bg-white h-full shadow-2xl flex flex-col transform transition-transform duration-300 ease-out ${
+               isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+             }`}
+          >
+             {/* Drawer Header */}
+             <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <span className="text-secondary font-black italic tracking-tighter text-lg">A BARATONA</span>
+                {/* Close button handled by the fixed toggle outside, or add internal one if preferred */}
+             </div>
+
+             {/* Links */}
+             <nav className="flex-1 overflow-y-auto p-6 flex flex-col gap-2">
+                <NavLink 
+                    to="/" 
+                    onClick={toggleMenu} 
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 text-secondary font-bold text-lg border-b border-gray-50"
+                >
+                    <i className="fas fa-home text-primary w-6"></i> Início
+                </NavLink>
+                <NavLink 
+                    to="/?scrollTo=precos" 
+                    onClick={toggleMenu}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 text-secondary font-bold text-lg border-b border-gray-50"
+                >
+                    <i className="fas fa-tags text-primary w-6"></i> Preços
+                </NavLink>
+                <NavLink 
+                    to="/?scrollTo=locais" 
+                    onClick={toggleMenu}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 text-secondary font-bold text-lg border-b border-gray-50"
+                >
+                    <i className="fas fa-map-marked-alt text-primary w-6"></i> Áreas de Atuação
+                </NavLink>
+                <NavLink 
+                    to="/contato" 
+                    onClick={toggleMenu}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 text-secondary font-bold text-lg border-b border-gray-50"
+                >
+                    <i className="fas fa-envelope text-primary w-6"></i> Contato
+                </NavLink>
+             </nav>
+
+             {/* Footer / Actions */}
+             <div className="p-6 bg-gray-50 border-t border-gray-200 space-y-3">
+                <a 
+                  href={`https://wa.me/${COMPANY_INFO.whatsappRaw}`}
+                  className="w-full bg-[#25D366] text-white py-3 rounded-xl shadow-md flex items-center justify-center gap-2 font-bold hover:bg-green-600 transition-colors"
+                >
+                  <i className="fab fa-whatsapp text-xl"></i> WhatsApp
+                </a>
+                <a 
+                  href={`tel:${COMPANY_INFO.phone.replace(/[^0-9]/g, '')}`}
+                  className="w-full bg-secondary text-white py-3 rounded-xl shadow-md flex items-center justify-center gap-2 font-bold hover:bg-black transition-colors"
+                >
+                  <i className="fas fa-phone-alt text-xl"></i> Ligar Agora
+                </a>
+             </div>
+          </div>
         </div>
       </header>
 
@@ -117,6 +178,7 @@ const Layout: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/contato" element={<ContactPage />} />
           <Route path="/:slug" element={<LocationPage />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -30,7 +30,9 @@ export interface Testimonial {
 export interface NewsItem {
   id: number;
   title: string;
+  slug: string;
   excerpt: string;
+  content: string; // HTML Content
   date: string;
   image: string;
   category: string;

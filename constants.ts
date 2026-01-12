@@ -108,40 +108,100 @@ export const TESTIMONIALS: Testimonial[] = [
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 1,
+    slug: "novas-regras-descarte-residuos-curitiba",
     title: "Novas regras para descarte de resíduos em Curitiba",
     excerpt: "Confira o que mudou na legislação municipal sobre caçambas estacionárias e evite multas na sua obra.",
+    content: `
+      <p>A partir deste ano, a Prefeitura de Curitiba implementou novas diretrizes para o gerenciamento de resíduos da construção civil (RCC). O objetivo é aumentar a taxa de reciclagem e diminuir o descarte irregular em áreas de preservação.</p>
+      <h3>O que muda para quem aluga caçambas?</h3>
+      <p>Agora, é obrigatório que o gerador do resíduo (você, cliente) exija o CTR (Controle de Transporte de Resíduos) da empresa locadora. Este documento comprova que o entulho foi levado para um aterro ou usina de reciclagem licenciada.</p>
+      <p>Além disso, caçambas estacionadas em vias públicas devem seguir rigorosamente as normas de sinalização, com faixas reflexivas e identificação clara da empresa responsável.</p>
+      <h3>Multas mais pesadas</h3>
+      <p>O não cumprimento das normas pode gerar multas que variam de R$ 500,00 a R$ 50.000,00, dependendo da gravidade da infração e do volume de material descartado incorretamente.</p>
+      <p><strong>A Baratona Caçambas já está 100% adequada às novas normas.</strong> Ao contratar nossos serviços, você tem a garantia de destinação correta e documentação em dia.</p>
+    `,
     date: "15 Jan 2025",
     image: "https://placehold.co/800x500/1A1A1A/FF6B00?text=Legisla%C3%A7%C3%A3o+Ambiental",
     category: "Legislação"
   },
   {
     id: 2,
+    slug: "como-calcular-tamanho-cacamba-ideal",
     title: "Como calcular o tamanho da caçamba ideal?",
     excerpt: "Guia completo para você não desperdiçar dinheiro pedindo uma caçamba muito grande ou muito pequena.",
+    content: `
+      <p>Escolher o tamanho certo da caçamba é fundamental para economizar na sua obra. Pedir uma caçamba muito pequena pode exigir uma segunda locação, dobrando o custo. Pedir uma muito grande é desperdício de espaço.</p>
+      <h3>Caçamba de 3m³ (Pequena)</h3>
+      <p>Ideal para pequenas reformas, como troca de pisos de um cômodo, pequenas demolições de paredes não estruturais ou limpeza de jardins. Equivale a aproximadamente 40 carrinhos de mão.</p>
+      <h3>Caçamba de 5m³ (Média - A mais popular)</h3>
+      <p>A mais utilizada em reformas residenciais completas. Comporta entulho de demolição de paredes, troca de telhados de médio porte e reformas de banheiros e cozinhas. Equivale a cerca de 70 a 80 carrinhos de mão.</p>
+      <h3>Caçamba de 8m³ (Grande)</h3>
+      <p>Indicada para grandes obras, construções desde o alicerce ou grandes demolições. É a melhor opção para construtoras e empreiteiros que geram muito volume rapidamente. Atenção: devido ao peso, em alguns casos só pode ser usada para materiais leves (madeira, plástico, gesso).</p>
+      <p>Na dúvida, envie uma foto do seu entulho para nosso WhatsApp e nossa equipe ajuda a calcular!</p>
+    `,
     date: "10 Jan 2025",
     image: "https://placehold.co/800x500/FF6B00/ffffff?text=Guia+de+Tamanhos",
     category: "Dicas"
   },
   {
     id: 3,
-    title: "A Baratona renova frota de caminhões em 2024",
+    slug: "a-baratona-renova-frota-2025",
+    title: "A Baratona renova frota de caminhões em 2025",
     excerpt: "Investimento em tecnologia e sustentabilidade para garantir entregas ainda mais rápidas em Curitiba.",
+    content: `
+      <p>Comprometida com a eficiência e a sustentabilidade, a A Baratona Caçambas anuncia a renovação de sua frota para 2025. Adquirimos novos caminhões equipados com tecnologia Euro 6, que emitem significativamente menos poluentes na atmosfera.</p>
+      <h3>Mais agilidade na entrega</h3>
+      <p>Os novos veículos possuem sistemas hidráulicos mais modernos, permitindo que a colocação e retirada das caçambas seja feita em questão de minutos. Isso reduz o tempo de bloqueio da via e agiliza o serviço para o cliente.</p>
+      <h3>Rastreamento em tempo real</h3>
+      <p>Toda a nova frota é equipada com GPS de alta precisão. Isso permite que nossa central de operações monitore cada entrega e retirada, garantindo que o prazo de "entrega em até 2 horas" seja cumprido rigorosamente.</p>
+      <p>É a tecnologia trabalhando a favor da sua obra!</p>
+    `,
     date: "05 Jan 2025",
     image: "https://placehold.co/800x500/333333/ffffff?text=Frota+Nova+2025",
     category: "Institucional"
   },
   {
     id: 4,
+    slug: "dicas-economizar-reforma",
     title: "Dicas para economizar na reforma da sua casa",
     excerpt: "Planejamento é tudo. Veja como organizar o cronograma da sua obra e reduzir o desperdício de materiais.",
+    content: `
+      <p>Reformar é realizar um sonho, mas sem planejamento pode virar um pesadelo financeiro. Confira 4 dicas essenciais para manter o orçamento sob controle.</p>
+      <ol>
+        <li><strong>Tenha um projeto:</strong> Não comece a quebrar nada sem saber exatamente como vai ficar. Mudanças de ideia no meio da obra são as maiores causadoras de prejuízo.</li>
+        <li><strong>Compre materiais com antecedência:</strong> Aproveite promoções e evite comprar tudo na última hora, quando você não tem tempo de pesquisar preços.</li>
+        <li><strong>Contrate mão de obra qualificada:</strong> "O barato sai caro". Um profissional ruim pode desperdiçar material e fazer serviços que precisarão ser refeitos.</li>
+        <li><strong>Gerencie o entulho:</strong> Manter a obra limpa aumenta a produtividade. Alugar uma caçamba e fazer a retirada programada evita acúmulo de sujeira que atrapalha os trabalhadores.</li>
+      </ol>
+      <p>Conte com a A Baratona para manter sua obra limpa e organizada com o melhor custo-benefício de Curitiba.</p>
+    `,
     date: "28 Dez 2024",
     image: "https://placehold.co/800x500/f3f4f6/1A1A1A?text=Dicas+de+Economia",
     category: "Economia"
   },
   {
     id: 5,
+    slug: "o-que-pode-nao-pode-cacamba",
     title: "O que pode e o que não pode colocar na caçamba?",
     excerpt: "Entenda a classificação de resíduos e saiba o que é proibido descartar em caçambas de entulho comuns.",
+    content: `
+      <p>Muitos clientes têm dúvidas sobre o que é permitido descartar nas caçambas estacionárias. O descarte incorreto pode gerar multas e até a recusa da retirada pela empresa, pois os aterros são rigorosos.</p>
+      <h3>✅ O QUE PODE:</h3>
+      <ul>
+        <li><strong>Resíduos Classe A:</strong> Tijolos, blocos, concreto, argamassa, areia e terra.</li>
+        <li><strong>Madeiras:</strong> Restos de construção, tábuas e compensados (em caçambas específicas ou mistas).</li>
+        <li><strong>Gesso:</strong> (Geralmente requer caçamba exclusiva ou separação, consulte-nos).</li>
+      </ul>
+      <h3>❌ O QUE NÃO PODE (PROIBIDO):</h3>
+      <ul>
+        <li><strong>Lixo Doméstico:</strong> Restos de comida, papel higiênico, fraldas.</li>
+        <li><strong>Resíduos Perigosos:</strong> Latas de tinta, solventes, óleos, graxas.</li>
+        <li><strong>Eletrônicos:</strong> Computadores, TVs, pilhas e baterias.</li>
+        <li><strong>Pneus e Amianto:</strong> Estes materiais exigem logística reversa específica.</li>
+        <li><strong>Lixo Hospitalar:</strong> Risco biológico grave.</li>
+      </ul>
+      <p>Tem dúvida sobre algum material? Entre em contato antes de jogar na caçamba!</p>
+    `,
     date: "20 Dez 2024",
     image: "https://placehold.co/800x500/22c55e/ffffff?text=Descarte+Consciente",
     category: "Educativo"
