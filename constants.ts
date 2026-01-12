@@ -45,7 +45,7 @@ export const IMAGES = {
   excavator: "https://file-service-full-build-prod.s3.amazonaws.com/2/0e281358-0051-4096-857e-e54737d97486.png",
   
   // Landfill/Environment
-  landfill: "https://placehold.co/800x600/2E8B57/ffffff?text=Descarte+Ecol%C3%B3gico&font=roboto",
+  landfill: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800",
   
   // Mascot
   mascot: "https://placehold.co/300x300/FF6B00/ffffff?text=Rei+da+Ca%C3%A7amba&font=roboto",
@@ -120,7 +120,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p><strong>A Baratona Caçambas já está 100% adequada às novas normas.</strong> Ao contratar nossos serviços, você tem a garantia de destinação correta e documentação em dia.</p>
     `,
     date: "15 Jan 2025",
-    image: "https://placehold.co/800x500/1A1A1A/FF6B00?text=Legisla%C3%A7%C3%A3o+Ambiental",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=800", // Legislation/Document
     category: "Legislação"
   },
   {
@@ -139,7 +139,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>Na dúvida, envie uma foto do seu entulho para nosso WhatsApp e nossa equipe ajuda a calcular!</p>
     `,
     date: "10 Jan 2025",
-    image: "https://placehold.co/800x500/FF6B00/ffffff?text=Guia+de+Tamanhos",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=800", // Calculator
     category: "Dicas"
   },
   {
@@ -156,7 +156,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>É a tecnologia trabalhando a favor da sua obra!</p>
     `,
     date: "05 Jan 2025",
-    image: "https://placehold.co/800x500/333333/ffffff?text=Frota+Nova+2025",
+    image: "https://file-service-full-build-prod.s3.amazonaws.com/3/cc1692ec-993d-424a-8742-df242142416b.png", // Fleet
     category: "Institucional"
   },
   {
@@ -175,7 +175,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>Conte com a A Baratona para manter sua obra limpa e organizada com o melhor custo-benefício de Curitiba.</p>
     `,
     date: "28 Dez 2024",
-    image: "https://placehold.co/800x500/f3f4f6/1A1A1A?text=Dicas+de+Economia",
+    image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800", // Money
     category: "Economia"
   },
   {
@@ -202,7 +202,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>Tem dúvida sobre algum material? Entre em contato antes de jogar na caçamba!</p>
     `,
     date: "20 Dez 2024",
-    image: "https://placehold.co/800x500/22c55e/ffffff?text=Descarte+Consciente",
+    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80&w=800", // Recycling
     category: "Educativo"
   }
 ];

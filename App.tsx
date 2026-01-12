@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import LocationPage from './pages/LocationPage';
 import ContactPage from './pages/ContactPage';
 import BlogPost from './pages/BlogPost';
+import ImageGenerator from './pages/ImageGenerator';
 import NotFound from './pages/NotFound';
 import FloatingButtons from './components/FloatingButtons';
 import Footer from './components/Footer';
@@ -152,6 +153,13 @@ const Layout: React.FC = () => {
                 >
                     <i className="fas fa-envelope text-primary w-6"></i> Contato
                 </NavLink>
+                <NavLink 
+                    to="/ferramentas/gerador-imagens" 
+                    onClick={toggleMenu}
+                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-orange-50 text-secondary font-bold text-lg border-b border-gray-50"
+                >
+                    <i className="fas fa-magic text-primary w-6"></i> Gerador IA
+                </NavLink>
              </nav>
 
              {/* Footer / Actions */}
@@ -179,6 +187,7 @@ const Layout: React.FC = () => {
           <Route path="/contato" element={<ContactPage />} />
           <Route path="/:slug" element={<LocationPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/ferramentas/gerador-imagens" element={<ImageGenerator />} />
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
