@@ -32,8 +32,8 @@ export const IMAGES = {
   // Hero Background: Dark construction texture
   heroBg: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=1920", 
   
-  // Truck: Frota Image - "Logística Própria" (CORRECTED: White Dump Truck / Poliguindaste)
-  truck: "https://images.unsplash.com/photo-1586864387789-628af9dea87a?auto=format&fit=crop&q=80&w=800", 
+  // Truck: Frota Image - "Logística Própria" (CORRECTED: Professional Heavy Dump Truck)
+  truck: "https://images.unsplash.com/photo-1605218427306-022ba6d10c8c?auto=format&fit=crop&q=80&w=800", 
   
   // Debris: Excavator/Rubble - "Coleta de Resíduos" (Excavator loading truck)
   debris: "https://images.unsplash.com/photo-1526500599607-160869389230?auto=format&fit=crop&q=80&w=800", 
@@ -205,7 +205,7 @@ export const NEWS_ITEMS: NewsItem[] = [
     `,
     date: "05 Jan 2025",
     // Modern truck on the road - symbolizes new fleet and technology
-    image: "https://images.unsplash.com/photo-1586864387789-628af9dea87a?auto=format&fit=crop&q=80&w=800", 
+    image: "https://images.unsplash.com/photo-1605218427306-022ba6d10c8c?auto=format&fit=crop&q=80&w=800", 
     category: "Institucional"
   },
   {
