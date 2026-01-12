@@ -63,9 +63,9 @@ const Footer: React.FC = () => {
 
           {/* Map (Placeholder) */}
           <div className="rounded-lg overflow-hidden h-48 bg-gray-800 relative group">
-             {/* Simulating interactive map link */}
+             {/* Interactive map link using correct shared link */}
              <a 
-               href={`https://maps.google.com/?q=${COMPANY_INFO.mapCoords.lat},${COMPANY_INFO.mapCoords.lng}`} 
+               href={COMPANY_INFO.googleMapsLink}
                target="_blank" 
                rel="noopener noreferrer"
                className="absolute inset-0 flex items-center justify-center bg-gray-700 group-hover:bg-gray-600 transition-colors cursor-pointer"

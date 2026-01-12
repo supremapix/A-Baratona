@@ -7,7 +7,8 @@ export const COMPANY_INFO = {
   whatsappRaw: "5541996701500",
   email: "sac@abaratonacacambas.com.br",
   address: "Rua Waldemar Loureiro Campos, 4119 - Xaxim, Curitiba - PR",
-  mapCoords: { lat: -25.467977, lng: -49.248827 }
+  mapCoords: { lat: -25.467977, lng: -49.248827 },
+  googleMapsLink: "https://maps.app.goo.gl/ty56IOoMwAzCso3vb"
 };
 
 // Slider Images for Hero Section - 5 Premium Images

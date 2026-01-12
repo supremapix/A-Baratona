@@ -75,7 +75,7 @@ const ContactPage: React.FC = () => {
                     <div className="bg-white p-2 rounded-2xl shadow-lg h-80 relative overflow-hidden group">
                          {/* Static Map Image / Placeholder acting as link */}
                          <a 
-                            href={`https://maps.google.com/?q=${COMPANY_INFO.mapCoords.lat},${COMPANY_INFO.mapCoords.lng}`} 
+                            href={COMPANY_INFO.googleMapsLink}
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="block w-full h-full relative"
