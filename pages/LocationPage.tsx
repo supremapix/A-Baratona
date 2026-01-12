@@ -6,6 +6,7 @@ import ContactForm from '../components/ContactForm';
 import { COMPANY_INFO, IMAGES } from '../constants';
 import NotFound from './NotFound';
 import PageTransition from '../components/PageTransition';
+import VideoSection from '../components/VideoSection';
 
 const LocationPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -106,6 +107,11 @@ const LocationPage: React.FC = () => {
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-justify">{content.text2.content}</p>
               </article>
+
+              {/* Video Section inserted here within content flow */}
+              <div className="my-8 -mx-4 md:mx-0">
+                  <VideoSection locationName={location.name} />
+              </div>
 
               <article className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
                 <h2 className="text-2xl font-bold text-secondary mb-4 flex items-center gap-3">

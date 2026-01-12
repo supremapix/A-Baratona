@@ -9,6 +9,7 @@ import InfiniteMarquee from '../components/InfiniteMarquee';
 import VerticalTestimonials from '../components/VerticalTestimonials';
 import NewsCarousel from '../components/NewsCarousel';
 import PageTransition from '../components/PageTransition';
+import VideoSection from '../components/VideoSection';
 
 const Home: React.FC = () => {
   const location = useLocation();
@@ -145,6 +146,9 @@ const Home: React.FC = () => {
             </div>
           </div>
         </section>
+
+        {/* Video Section */}
+        <VideoSection />
 
         {/* Pricing & Calculator */}
         <section id="precos" className="py-20 bg-white relative overflow-hidden">
