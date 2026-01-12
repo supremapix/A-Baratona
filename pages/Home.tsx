@@ -186,73 +186,128 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Gallery Section - Updated to Match Print */}
+        {/* Gallery Section - Redesigned Impactful Cards */}
         <section className="py-24 bg-secondary text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-primary/5"></div>
+          {/* Background Elements */}
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-secondary to-transparent z-10"></div>
+          
           <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                <div>
-                  <h2 className="text-4xl font-black mb-2">Nossa Frota e Serviços</h2>
-                  <div className="w-20 h-1 bg-primary rounded-full"></div>
+                  <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block animate-pulse">Qualidade Premium</span>
+                  <h2 className="text-4xl md:text-5xl font-black mb-2">Nossa Frota e Serviços</h2>
+                  <div className="w-24 h-2 bg-gradient-to-r from-primary to-orange-600 rounded-full mt-4"></div>
                </div>
-               <p className="text-gray-400 mt-4 md:mt-0 max-w-md text-right">
-                  Equipamentos modernos para garantir segurança e eficiência na sua obra.
+               <p className="text-gray-400 mt-6 md:mt-0 max-w-md text-right leading-relaxed border-r-4 border-primary pr-6">
+                  Equipamentos modernos para garantir segurança, agilidade e eficiência total na sua obra.
                </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-               {/* Card 1: Frota / Logística Própria */}
-               <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-2xl bg-black">
-                  <img src={IMAGES.truck} alt="Caminhão A Baratona" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-40" />
-                  <div className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider z-20">FROTA 2024</div>
-                  
-                  {/* Center Text */}
-                  <div className="absolute inset-0 flex items-center justify-center p-4">
-                      <h4 className="text-primary font-bold text-2xl md:text-3xl text-center leading-tight drop-shadow-md">Frota Própria Baratona</h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+               
+               {/* Card 1: Logística Própria (Dark/Industrial) */}
+               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-orange-500/20">
+                  {/* Background Emulation (Fallback) */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-black z-0">
+                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-500 to-transparent"></div>
+                      <i className="fas fa-truck text-9xl text-white/5 absolute -right-4 -bottom-4 transform -rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
                   </div>
                   
-                  {/* Bottom Left Title */}
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1">Logística Própria</h3>
+                  {/* Image Layer */}
+                  <img 
+                    src={IMAGES.truck} 
+                    alt="Caminhão A Baratona" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" 
+                    loading="lazy"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
+                  
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 z-20">
+                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                          <span className="inline-block bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 shadow-lg">Frota 2025</span>
+                          <h3 className="text-3xl font-black text-white leading-none mb-2">Logística Própria</h3>
+                          <h4 className="text-xl text-gray-300 font-bold mb-4 opacity-80 group-hover:text-white transition-colors">Frota Própria Baratona</h4>
+                          
+                          <div className="h-0 group-hover:h-auto overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                              <p className="text-gray-400 text-sm border-l-2 border-primary pl-3">
+                                  Caminhões monitorados via satélite para entregas precisas e pontuais.
+                              </p>
+                          </div>
+                      </div>
                   </div>
                </div>
 
-               {/* Card 2: Coleta de Resíduos */}
-               <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-2xl bg-black">
-                  <img src={IMAGES.debris} alt="Coleta de Entulho" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-40" />
-                  
-                  {/* Center Text */}
-                  <div className="absolute inset-0 flex items-center justify-center p-4">
-                      <h4 className="text-gray-300 font-bold text-2xl md:text-3xl text-center leading-tight drop-shadow-md">Coleta de Entulho e Resíduos</h4>
+               {/* Card 2: Coleta de Resíduos (Dark/Action) */}
+               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-orange-500/20">
+                  {/* Background Emulation */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 to-zinc-800 z-0">
+                      <i className="fas fa-recycle text-9xl text-white/5 absolute -left-4 -top-4 transform rotate-12 group-hover:rotate-0 transition-transform duration-700"></i>
                   </div>
+
+                  {/* Image Layer */}
+                  <img 
+                    src={IMAGES.debris} 
+                    alt="Coleta de Entulho" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-40" 
+                    loading="lazy"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
                   
-                  {/* Bottom Left Title */}
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1">Coleta de Resíduos</h3>
-                      <p className="text-gray-400 text-sm">Restos de obra, madeira, caliça e jardinagem.</p>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-8 z-20">
+                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                          <span className="inline-block bg-white/20 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Eco-Friendly</span>
+                          <h3 className="text-3xl font-black text-white leading-none mb-2">Coleta de Resíduos</h3>
+                          <h4 className="text-xl text-gray-300 font-bold mb-4 opacity-80 group-hover:text-white transition-colors">Entulhos e Resíduos</h4>
+                          
+                          <div className="h-0 group-hover:h-auto overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                              <p className="text-gray-400 text-sm border-l-2 border-primary pl-3">
+                                  Destinação correta para restos de obra, madeira, caliça e jardinagem.
+                              </p>
+                          </div>
+                      </div>
                   </div>
                </div>
 
-               {/* Card 3: Caçambas Padrão */}
-               <div className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-2xl bg-primary">
-                  {/* Using gradient background instead of image for the last card to match the orange block style if preferred, 
-                      or using the image with orange overlay. The print shows a full orange block. 
-                      Let's emulate the orange block look using the skipBin image with heavy overlay. */}
-                  <img src={IMAGES.skipBin} alt="Caçamba Amarela A Baratona" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 opacity-20 mix-blend-multiply" />
-                  <div className="absolute inset-0 bg-primary/80 mix-blend-multiply"></div>
-                  
-                  {/* Center Text */}
-                  <div className="absolute inset-0 flex items-center justify-center p-4">
-                      <h4 className="text-white font-bold text-2xl md:text-3xl text-center leading-tight drop-shadow-md">
-                          Caçambas 3m³ 5m³ e 8m³
-                      </h4>
+               {/* Card 3: Caçambas Padrão (Highlighted Orange Brand Color) */}
+               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:shadow-orange-500/50 ring-4 ring-transparent hover:ring-white/20">
+                  {/* Background Emulation (Orange Brand) */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary to-orange-700 z-0">
+                      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')]"></div>
+                      <i className="fas fa-cubes text-9xl text-white/10 absolute -right-8 -bottom-8 transform rotate-12 group-hover:scale-125 transition-transform duration-700"></i>
                   </div>
+
+                  {/* Image Layer (Blended) */}
+                  <img 
+                    src={IMAGES.skipBin} 
+                    alt="Caçambas Padrão" 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-20 mix-blend-overlay" 
+                    loading="lazy"
+                    onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                  />
                   
-                  {/* Bottom Left Title */}
-                  <div className="absolute bottom-0 left-0 w-full p-6">
-                      <h3 className="text-2xl font-bold text-white mb-1">Caçambas Padrão</h3>
+                  {/* Content Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-900/90 via-transparent to-transparent flex flex-col justify-end p-8 z-20">
+                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                          <div className="flex gap-2 mb-3">
+                              <span className="bg-white text-primary text-xs font-bold px-2 py-1 rounded">3m³</span>
+                              <span className="bg-white text-primary text-xs font-bold px-2 py-1 rounded">5m³</span>
+                              <span className="bg-white text-primary text-xs font-bold px-2 py-1 rounded">8m³</span>
+                          </div>
+                          <h3 className="text-3xl font-black text-white leading-none mb-2">Caçambas Padrão</h3>
+                          <h4 className="text-xl text-orange-100 font-bold mb-4 opacity-90 group-hover:text-white transition-colors">Para todo tamanho de obra</h4>
+                          
+                          <div className="h-0 group-hover:h-auto overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                             <button className="mt-2 bg-white text-primary font-bold py-2 px-6 rounded-full shadow-lg hover:bg-gray-100 transition-colors flex items-center gap-2">
+                                <i className="fab fa-whatsapp"></i> Pedir Agora
+                             </button>
+                          </div>
+                      </div>
                   </div>
                </div>
+
             </div>
           </div>
         </section>
