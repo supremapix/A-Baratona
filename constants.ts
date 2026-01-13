@@ -205,8 +205,8 @@ export const NEWS_ITEMS: NewsItem[] = [
       <p>Isso nos permite cumprir rigorosamente o prazo de "entrega em até 2 horas" para bairros selecionados, pois conseguimos despachar o caminhão mais próximo da sua localização instantaneamente. É a tecnologia trabalhando a favor do cronograma da sua obra!</p>
     `,
     date: "05 Jan 2025",
-    // Modern truck on the road - symbolizes new fleet and technology
-    image: "https://images.unsplash.com/photo-1605218427306-022ba6d10c8c?auto=format&fit=crop&q=80&w=800", 
+    // Modern truck on the road - symbolizes new fleet and technology (Updated to fixed URL)
+    image: "https://images.unsplash.com/photo-1591798365688-66258f8b049d?auto=format&fit=crop&q=80&w=800", 
     category: "Institucional"
   },
   {

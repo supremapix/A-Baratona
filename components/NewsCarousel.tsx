@@ -96,6 +96,9 @@ const NewsCarousel: React.FC = () => {
                         src={item.image} 
                         alt={item.title} 
                         className="w-full h-full object-cover transform group-hover/card:scale-110 transition-transform duration-700"
+                        onError={(e) => {
+                          e.currentTarget.src = "https://placehold.co/800x600/FF6B00/FFFFFF?text=A+Baratona";
+                        }}
                       />
                       <div className="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
                         {item.category}
