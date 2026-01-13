@@ -34,7 +34,6 @@ const Footer: React.FC = () => {
               <li><Link to="/?scrollTo=precos" className="text-gray-400 hover:text-primary transition-colors">Preços</Link></li>
               <li><Link to="/?scrollTo=locais" className="text-gray-400 hover:text-primary transition-colors">Área de Atuação</Link></li>
               <li><Link to="/contato" className="text-gray-400 hover:text-primary transition-colors">Contato</Link></li>
-              <li><Link to="/ferramentas/gerador-imagens" className="text-gray-400 hover:text-primary transition-colors text-xs flex items-center gap-1"><i className="fas fa-magic"></i> Gerador IA</Link></li>
             </ul>
           </div>
 
