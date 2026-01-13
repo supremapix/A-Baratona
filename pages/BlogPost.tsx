@@ -53,7 +53,15 @@ const BlogPost: React.FC = () => {
             <div className="lg:col-span-2">
               <article className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
                 <div className="relative h-64 md:h-96 w-full group">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105" />
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    className="w-full h-full object-cover transform transition-transform duration-1000 group-hover:scale-105" 
+                    onError={(e) => {
+                      e.currentTarget.src = "https://placehold.co/1200x600/FF6B00/ffffff?text=A+Baratona+Blog";
+                      e.currentTarget.className = "w-full h-full object-cover opacity-80"; // Slightly different style for placeholder
+                    }}
+                  />
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <span className="bg-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block shadow-md">
@@ -108,7 +116,14 @@ const BlogPost: React.FC = () => {
                       {relatedPosts.map(rel => (
                           <Link to={`/blog/${rel.slug}`} key={rel.id} className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all border border-gray-100">
                               <div className="h-40 overflow-hidden relative">
-                                  <img src={rel.image} alt={rel.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                  <img 
+                                    src={rel.image} 
+                                    alt={rel.title} 
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
+                                    onError={(e) => {
+                                      e.currentTarget.src = "https://placehold.co/600x400/FF6B00/ffffff?text=A+Baratona";
+                                    }}
+                                  />
                                   <div className="absolute top-2 left-2 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold text-primary">
                                     {rel.category}
                                   </div>
