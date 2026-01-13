@@ -5,6 +5,7 @@ import { NEWS_ITEMS, COMPANY_INFO, IMAGES } from '../constants';
 import NotFound from './NotFound';
 import ContactForm from '../components/ContactForm';
 import PageTransition from '../components/PageTransition';
+import AnimatedAlertIcon from '../components/AnimatedAlertIcon';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -129,7 +130,9 @@ const BlogPost: React.FC = () => {
                      <div className="absolute inset-0 bg-primary/10"></div>
                      <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-2xl -mr-16 -mt-16"></div>
                      <div className="relative z-10">
-                         <img src={IMAGES.mascot} alt="Rei da Caçamba" className="w-24 h-24 rounded-full mx-auto border-4 border-primary mb-4 bg-white object-cover shadow-lg" />
+                         {/* Replaced Image with Animated Alert Icon */}
+                         <AnimatedAlertIcon size="lg" className="!mt-0 mb-6" />
+                         
                          <h3 className="text-xl font-bold mb-2">Gostou das dicas?</h3>
                          <p className="text-gray-300 text-sm mb-6 leading-relaxed">Agora coloque em prática na sua obra. Alugue sua caçamba com a melhor de Curitiba.</p>
                          <a 
