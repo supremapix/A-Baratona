@@ -6,6 +6,7 @@ import NotFound from './NotFound';
 import ContactForm from '../components/ContactForm';
 import PageTransition from '../components/PageTransition';
 import AnimatedAlertIcon from '../components/AnimatedAlertIcon';
+import ShareButtons from '../components/ShareButtons';
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -21,6 +22,7 @@ const BlogPost: React.FC = () => {
 
   // Related posts logic (excluding current)
   const relatedPosts = NEWS_ITEMS.filter(item => item.id !== post.id).slice(0, 3);
+  const currentUrl = window.location.href;
 
   return (
     <PageTransition>
@@ -86,25 +88,14 @@ const BlogPost: React.FC = () => {
                   
                   {/* Share / Tags */}
                   <div className="border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 bg-gray-50 -mx-6 md:-mx-12 -mb-6 md:-mb-12 p-8">
-                      <div className="text-gray-500 font-bold text-sm">
-                          Compartilhe este artigo:
+                      <div className="text-gray-500 font-bold text-sm uppercase tracking-wide">
+                          Gostou? Compartilhe:
                       </div>
-                      <div className="flex gap-3">
-                          <button className="w-10 h-10 rounded-full bg-[#3b5998] text-white flex items-center justify-center hover:opacity-90 transition-opacity shadow-sm">
-                              <i className="fab fa-facebook-f"></i>
-                          </button>
-                          <a 
-                             href={`https://wa.me/?text=${encodeURIComponent(`Veja este artigo da A Baratona: ${post.title} https://abaratonacacambas.com.br/blog/${post.slug}`)}`}
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:opacity-90 transition-opacity shadow-sm"
-                          >
-                              <i className="fab fa-whatsapp"></i>
-                          </a>
-                          <button className="w-10 h-10 rounded-full bg-[#1DA1F2] text-white flex items-center justify-center hover:opacity-90 transition-opacity shadow-sm">
-                              <i className="fab fa-twitter"></i>
-                          </button>
-                      </div>
+                      <ShareButtons 
+                        url={currentUrl} 
+                        title={post.title} 
+                        description={`Olha que dica top da A Baratona: "${post.title}". Vale a pena ler!`}
+                      />
                   </div>
                 </div>
               </article>

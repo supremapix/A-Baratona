@@ -7,6 +7,7 @@ import { COMPANY_INFO, IMAGES } from '../constants';
 import NotFound from './NotFound';
 import PageTransition from '../components/PageTransition';
 import VideoSection from '../components/VideoSection';
+import ShareButtons from '../components/ShareButtons';
 
 const LocationPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -23,6 +24,7 @@ const LocationPage: React.FC = () => {
   }
 
   const content = generateLocationContent(location);
+  const currentUrl = window.location.href;
 
   return (
     <PageTransition>
@@ -182,6 +184,19 @@ const LocationPage: React.FC = () => {
                 <div className="bg-secondary p-4 rounded-xl">
                    <ContactForm />
                 </div>
+              </div>
+              
+              {/* Share Box */}
+              <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <h3 className="font-bold text-secondary mb-4 border-b pb-2 flex items-center gap-2">
+                  <i className="fas fa-share-alt text-primary"></i> Indique para um amigo
+                </h3>
+                <p className="text-sm text-gray-500 mb-4">Conhece alguém construindo em {location.name}? Compartilhe:</p>
+                <ShareButtons 
+                  url={currentUrl} 
+                  title={`Caçambas em ${location.name} - A Baratona`} 
+                  description={`Olha só, encontrei a melhor opção de caçambas para obras em ${location.name}. Entrega rápida e preço bom!`}
+                />
               </div>
 
               <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../constants';
 import Logo from './Logo';
+import ShareButtons from './ShareButtons';
 
 const Footer: React.FC = () => {
   return (
@@ -13,16 +14,17 @@ const Footer: React.FC = () => {
             <div className="mb-6 transform origin-left">
               <Logo scale={0.8} />
             </div>
-            <p className="text-gray-400 mb-4 text-sm">
+            <p className="text-gray-400 mb-6 text-sm">
               Líder em locação de caçambas em Curitiba e Região. Compromisso com o meio ambiente e agilidade na sua obra.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
-                <i className="fab fa-instagram"></i>
-              </a>
+            
+            {/* Share Page Section */}
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Recomende nosso site:</p>
+              <ShareButtons 
+                variant="minimal" 
+                description="Precisa alugar caçamba em Curitiba? Recomendo A Baratona! O melhor preço e atendimento da cidade." 
+              />
             </div>
           </div>
 
