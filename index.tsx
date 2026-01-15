@@ -13,3 +13,18 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// After React has successfully rendered, hide the loading screen
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loading-screen');
+  if (loader) {
+    // Small delay to ensure everything is really painted
+    setTimeout(() => {
+      loader.style.opacity = '0';
+      loader.style.visibility = 'hidden';
+      setTimeout(() => {
+        loader.remove();
+      }, 500);
+    }, 300);
+  }
+});
