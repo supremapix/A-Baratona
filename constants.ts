@@ -8,7 +8,7 @@ export const COMPANY_INFO = {
   email: "sac@abaratonacacambas.com.br",
   address: "Rua Waldemar Loureiro Campos, 4119 - Xaxim, Curitiba - PR",
   mapCoords: { lat: -25.467977, lng: -49.248827 },
-  googleMapsLink: "https://maps.app.goo.gl/ty56IOoMwAzCso3vb"
+  googleMapsLink: "https://maps.app.goo.gl/UWf6eritCTRZksmWA"
 };
 
 // Slider Images for Hero Section - 5 Premium Images
@@ -170,7 +170,7 @@ export const NEWS_ITEMS: NewsItem[] = [
       <ul>
         <li><strong>Capacidade:</strong> Mais de 120 carrinhos de mão.</li>
         <li><strong>Uso comum:</strong> Construções desde o alicerce, grandes demolições, limpeza de terrenos com muito mato/madeira.</li>
-        <li><strong>Importante:</strong> Para entulho muito pesado (apenas concreto/terra), verifique com a locadora se o caminhão suporta o peso de uma caçamba de 8m³ cheia, ou se é melhor dividir em duas de 4m³ ou 5m³.</li>
+        <li><strong>Importante:</strong> Para entulho muito pesado (apenas concreto/terra), verifique com a locadora se o caminhão suporta o peso de uma caçamba de 8m³ cheia, ou se é melhor dividir em duas de 4m³ ou 5m³ mount.</li>
       </ul>
 
       <h3>Dica de Ouro: A "Montanha" de Entulho</h3>
@@ -184,7 +184,7 @@ export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 3,
     slug: "a-baratona-renova-frota-2025",
-    title: "A Baratona renova frota de caminhões em 2025: Tecnologia e Sustentabilidade",
+    title: "A Baratona renasce frota de caminhões em 2025: Tecnologia e Sustentabilidade",
     excerpt: "Investimento em tecnologia Euro 6 e sistemas hidráulicos modernos para garantir entregas ainda mais rápidas e limpas em Curitiba.",
     content: `
       <p class="lead">Comprometida com a eficiência operacional e a sustentabilidade ambiental, a A Baratona Caçambas tem o orgulho de anunciar a renovação completa de sua frota para o ano de 2025.</p>
