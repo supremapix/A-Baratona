@@ -1,20 +1,58 @@
-import { COMPANY_INFO, ALL_LOCATIONS } from '../constants';
+
+import { COMPANY_INFO, ALL_LOCATIONS, NEWS_ITEMS } from '../constants';
 import { LocationData } from '../types';
 
 export const getLocationBySlug = (slug: string): LocationData | undefined => {
   return ALL_LOCATIONS.find(loc => loc.slug === slug);
 };
 
-// Function to generate slightly different phrasing to avoid duplicate content penalties
-const getVariedIntro = (name: string, type: 'city' | 'neighborhood') => {
+const getVariedIntro = (name: string) => {
   const intros = [
-    `A demanda por locação de caçambas em ${name} tem crescido exponencialmente devido ao aumento de obras e reformas na região.`,
-    `Se você está construindo ou reformando em ${name}, sabe que o descarte correto de entulhos é fundamental para evitar multas.`,
-    `Para moradores e empresas de ${name}, a A Baratona oferece a solução mais ágil em caçambas estacionárias.`,
-    `Chegou a hora de organizar sua obra em ${name} com o serviço de remoção de entulhos mais confiável do Paraná.`
+    `Precisa de agilidade? A locação de caçambas em ${name} é essencial para manter sua obra organizada e dentro das normas ambientais.`,
+    `Se você está construindo ou reformando em ${name}, a A Baratona oferece o serviço de remoção de entulho mais rápido da região.`,
+    `Atendemos toda a região de ${name} com caçambas estacionárias legalizadas e descarte 100% correto.`,
+    `A solução definitiva para o entulho da sua obra em ${name} está aqui. Entrega expressa e preço justo.`
   ];
-  // Deterministic selection based on name length so it stays consistent per page
   return intros[name.length % intros.length];
+};
+
+export const generateHomeSchemas = () => {
+  const baseUrl = "https://abaratonacacambas.com.br";
+  
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": COMPANY_INFO.name,
+      "image": `${baseUrl}/logo.png`,
+      "@id": `${baseUrl}/#organization`,
+      "url": baseUrl,
+      "telephone": COMPANY_INFO.phone,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": COMPANY_INFO.address,
+        "addressLocality": "Curitiba",
+        "addressRegion": "PR",
+        "postalCode": "81810-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": COMPANY_INFO.mapCoords.lat,
+        "longitude": COMPANY_INFO.mapCoords.lng
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/abaratonacacambas",
+        "https://www.instagram.com/abaratonacacambas"
+      ]
+    }
+  ];
 };
 
 export const generateLocationContent = (location: LocationData) => {
@@ -22,41 +60,11 @@ export const generateLocationContent = (location: LocationData) => {
   const locName = location.name;
   const baseUrl = "https://abaratonacacambas.com.br";
   const currentUrl = `${baseUrl}/${location.slug}`;
-  const intro = getVariedIntro(locName, location.type);
+  const intro = getVariedIntro(locName);
   
-  // Advanced Meta Data
-  const metaTitle = `Aluguel de Caçambas em ${locName} - Entrega Rápida | A Baratona`;
-  const metaDesc = `Precisa de caçamba em ${locName}? Locação de caçambas 3m³, 5m³ e 8m³ com melhor preço. Entrega em até 2h para ${locName}. Peça pelo WhatsApp!`;
+  const metaTitle = `Aluguel de Caçambas em ${locName} | Entrega em 2h | A Baratona`;
+  const metaDesc = `Locação de caçambas em ${locName}. Peça sua caçamba 3m³, 5m³ ou 8m³ com o melhor preço de Curitiba. Atendimento 24h via WhatsApp em ${locName}.`;
   
-  const content = {
-    title: metaTitle,
-    metaDesc: metaDesc,
-    canonical: currentUrl,
-    
-    text1: {
-      heading: `Locação de Caçambas em ${locName}`,
-      content: `${intro} Seja para construções residenciais, comerciais ou pequenas reformas domésticas, o descarte correto de entulhos é lei. A Baratona se destaca como líder no fornecimento de caçambas estacionárias em ${locName}, garantindo que seu projeto siga sem interrupções. Nossa frota moderna permite acesso fácil mesmo nas ruas mais estreitas de ${locName}, assegurando pontualidade e eficiência máxima.`
-    },
-    
-    text2: {
-      heading: `Serviços de Remoção de Entulho em ${locName}`,
-      content: `Em ${locName}, os serviços mais solicitados envolvem a remoção de resíduos de construção civil (Classe A), como tijolos, concreto e argamassa. No entanto, também atendemos demandas para limpeza de terrenos, podas de jardim e descarte de madeira. Nossas caçambas de 3m³, 5m³ e 8m³ são perfeitamente dimensionadas para qualquer tamanho de obra em ${locName}. Oferecemos um processo simplificado: você solicita via WhatsApp, nós entregamos, você enche e nós retiramos e destinamos corretamente aos aterros autorizados.`
-    },
-    
-    text3: {
-      heading: `Por que escolher A Baratona em ${locName}?`,
-      content: `O grande diferencial da A Baratona em ${locName} é nossa agilidade e compromisso com o cliente. Entendemos que uma obra parada por falta de espaço para entulho é prejuízo. Por isso, oferecemos entrega expressa em até 2 horas para diversas áreas de ${locName} e região. Além disso, nossos preços são imbatíveis. Cobrimos orçamentos e oferecemos condições especiais para construtores e empreiteiros que atuam em ${locName}. Nosso atendimento é humanizado, 24 horas por dia via WhatsApp.`
-    },
-    
-    text4: {
-      heading: `Atendimento Completo em ${locName} e Região`,
-      content: `Nossa logística cobre 100% da área de ${locName}, chegando onde outras empresas não chegam. Conhecemos cada rua e particularidade de ${locName}, o que facilita o posicionamento correto da caçamba conforme as normas de trânsito locais. Seja no centro de ${locName} ou nos bairros mais afastados, a A Baratona é a escolha certa. Milhares de clientes em ${locName} já comprovaram a qualidade do nosso serviço. Não arrisque multas por descarte irregular; contrate quem entende do assunto.`
-    }
-  };
-
-  // Structured Data (JSON-LD)
-  
-  // 1. BreadcrumbList
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -73,121 +81,105 @@ export const generateLocationContent = (location: LocationData) => {
     }]
   };
 
-  // 2. LocalBusiness / Service
-  const serviceSchema = {
+  const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Locação de Caçambas",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": COMPANY_INFO.name,
-      "telephone": COMPANY_INFO.phone,
-      "image": "https://abaratonacacambas.com.br/logo.png", // Assuming logo path
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": COMPANY_INFO.address,
-        "addressLocality": "Curitiba",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
-      },
-      "priceRange": "$$"
+    "@type": "LocalBusiness",
+    "name": `${COMPANY_INFO.name} - Unidade ${locName}`,
+    "description": metaDesc,
+    "url": currentUrl,
+    "telephone": COMPANY_INFO.phone,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": isCity ? locName : "Curitiba",
+      "addressRegion": "PR",
+      "addressCountry": "BR"
     },
     "areaServed": {
       "@type": "Place",
-      "name": locName,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": isCity ? locName : "Curitiba",
-        "addressRegion": "PR",
-        "addressCountry": "BR"
-      }
+      "name": locName
     },
-    "description": metaDesc,
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Tamanhos de Caçambas",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Caçamba 3m³"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Caçamba 5m³"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Caçamba 8m³"
-          }
-        }
-      ]
-    }
+    "priceRange": "$$"
   };
 
-  // 3. FAQ Schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [{
       "@type": "Question",
-      "name": `Quanto custa alugar uma caçamba em ${locName}?`,
+      "name": `Como alugar caçamba em ${locName}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Os valores variam conforme o tamanho (3m, 5m ou 8m) e o tipo de resíduo. Entre em contato pelo WhatsApp ${COMPANY_INFO.whatsapp} para um orçamento personalizado para ${locName}.`
+        "text": `Para alugar uma caçamba em ${locName}, basta entrar em contato pelo WhatsApp ${COMPANY_INFO.whatsapp}. Informamos o preço na hora e entregamos em até 2 horas.`
       }
     }, {
       "@type": "Question",
-      "name": `Qual o prazo de entrega para ${locName}?`,
+      "name": `Qual o preço da caçamba de entulho em ${locName}?`,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": `Para ${locName}, conseguimos entregar caçambas em até 2 horas após a confirmação do pedido, dependendo da disponibilidade logística do momento.`
-      }
-    }, {
-      "@type": "Question",
-      "name": `Posso colocar a caçamba na rua em ${locName}?`,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sim, desde que respeite as normas de trânsito. Nossa equipe orienta sobre a melhor posição para evitar multas e garantir a segurança."
+        "text": `O preço da caçamba em ${locName} varia conforme o tamanho (3m³, 5m³ ou 8m³). Oferecemos o melhor custo-benefício de Curitiba e região.`
       }
     }]
   };
 
   return {
-    ...content,
-    schemas: [breadcrumbSchema, serviceSchema, faqSchema]
+    title: metaTitle,
+    metaDesc: metaDesc,
+    canonical: currentUrl,
+    intro,
+    text1: {
+      heading: `Locação de Caçambas em ${locName}`,
+      content: `${intro} A Baratona é especialista em atender ${locName} com agilidade extrema. Nossa frota circula diariamente por toda a região, garantindo que seu entulho seja removido sem atrasos.`
+    },
+    text2: {
+      heading: `Disk Caçamba ${locName}`,
+      content: `O serviço de Disk Caçamba em ${locName} funciona 24h para pedidos via WhatsApp. Atendemos residências, condomínios e grandes obras comerciais em ${locName} com equipamentos novos e seguros.`
+    },
+    text3: {
+      heading: `Benefícios para sua obra em ${locName}`,
+      content: `Ao escolher A Baratona em ${locName}, você garante um descarte ecológico. Levamos todo o material para usinas de reciclagem, evitando multas ambientais para sua obra em ${locName}.`
+    },
+    text4: {
+      heading: `Atendimento em ${locName} e Proximidades`,
+      content: `Seja no centro ou nos arredores de ${locName}, nossa equipe conhece bem as rotas e horários permitidos para estacionamento de caçambas, facilitando a logística do seu projeto.`
+    },
+    schemas: [breadcrumbSchema, localBusinessSchema, faqSchema]
   };
 };
 
+/**
+ * Generates a sitemap XML string containing all site routes.
+ * This is used for search engine optimization.
+ */
 export const generateSitemapXML = () => {
   const baseUrl = "https://abaratonacacambas.com.br";
+  
   const staticPages = [
-    `${baseUrl}/`,
+    { url: '', priority: '1.0' },
+    { url: 'contato', priority: '0.7' }
   ];
+
+  const locationPages = ALL_LOCATIONS.map(loc => ({
+    url: loc.slug,
+    priority: '0.9'
+  }));
+
+  const blogPages = NEWS_ITEMS.map(post => ({
+    url: `blog/${post.slug}`,
+    priority: '0.6'
+  }));
+
+  const allPages = [...staticPages, ...locationPages, ...blogPages];
+
+  let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   
-  // Ensure we cover all 150+ locations defined in constants
-  const dynamicPages = ALL_LOCATIONS.map(loc => `${baseUrl}/${loc.slug}`);
-  
-  const allUrls = [...staticPages, ...dynamicPages];
-  
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-  
-  allUrls.forEach(url => {
-    // Priority: Home 1.0, Cities 0.9, Neighborhoods 0.8
-    let priority = '0.8';
-    if (url === `${baseUrl}/`) priority = '1.0';
-    // Logic to check if it's a city (simplified based on url structure/knowledge)
-    
-    xml += `  <url>\n    <loc>${url}</loc>\n    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${priority}</priority>\n  </url>\n`;
+  allPages.forEach(page => {
+    xml += '  <url>\n';
+    xml += `    <loc>${baseUrl}/${page.url}</loc>\n`;
+    xml += `    <priority>${page.priority}</priority>\n`;
+    xml += '  </url>\n';
   });
-  
-  xml += `</urlset>`;
+
+  xml += '</urlset>';
   return xml;
 };
