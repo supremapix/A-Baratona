@@ -68,16 +68,16 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({
         <i className="fab fa-facebook-f"></i>
       </a>
 
-      {/* Twitter / X */}
+      {/* Twitter - Changed to Blue / Bird Icon based on feedback */}
       <a 
         href={links.twitter} 
         target="_blank" 
         rel="noopener noreferrer"
-        className={`${buttonBaseClass} ${sizeClass} bg-black text-white hover:bg-gray-800`}
-        title="Compartilhar no X (Twitter)"
-        aria-label="Compartilhar no X"
+        className={`${buttonBaseClass} ${sizeClass} bg-[#1DA1F2] text-white hover:bg-[#0c85d0]`}
+        title="Compartilhar no Twitter"
+        aria-label="Compartilhar no Twitter"
       >
-        <i className="fab fa-x-twitter"></i>
+        <i className="fab fa-twitter"></i>
       </a>
 
       {/* LinkedIn */}
