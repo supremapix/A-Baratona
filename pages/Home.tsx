@@ -124,7 +124,7 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* Rest of the components remain the same */}
+        {/* Diferenciais */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -178,32 +178,61 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-secondary text-white relative">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-               <div>
-                  <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Qualidade Premium</span>
-                  <h2 className="text-4xl md:text-5xl font-black mb-2">Nossa Frota e Serviços</h2>
-               </div>
+        {/* Seção Premium com Ícones Animados */}
+        <section className="py-24 bg-secondary text-white relative overflow-hidden">
+          {/* Fundo Decorativo */}
+          <div className="absolute inset-0 opacity-5 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+          </div>
+
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block animate-pulse">Padrão de Excelência</span>
+              <h2 className="text-4xl md:text-5xl font-black mb-4">Qualidade Premium</h2>
+              <p className="text-gray-400">Investimos em tecnologia e processos para oferecer a melhor experiência em locação de caçambas.</p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3">
-                  <img src={IMAGES.truck} alt="Frota de Caçambas" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-8">
-                      <h3 className="text-3xl font-black text-white leading-none mb-2">Logística Própria</h3>
+               {/* Item 1: Logística */}
+               <div className="group bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] text-center transition-all duration-500 hover:bg-primary/10 hover:border-primary/50 hover:-translate-y-4">
+                  <div className="relative w-28 h-28 mx-auto mb-8">
+                    <div className="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative w-full h-full bg-white/5 rounded-full flex items-center justify-center border-2 border-white/20 group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
+                      <i className="fas fa-truck-fast text-5xl text-white group-hover:text-primary transition-colors duration-500 transform group-hover:rotate-12"></i>
+                    </div>
                   </div>
+                  <h3 className="text-2xl font-black text-white mb-4">Logística Própria</h3>
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-200 transition-colors">
+                    Frota 100% monitorada via satélite. Nossos caminhões são equipados com sistemas hidráulicos de última geração para entregas precisas e seguras.
+                  </p>
                </div>
-               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3">
-                  <img src={IMAGES.debris} alt="Remoção de Entulho" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-8">
-                      <h3 className="text-3xl font-black text-white leading-none mb-2">Coleta de Resíduos</h3>
+
+               {/* Item 2: Coleta */}
+               <div className="group bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] text-center transition-all duration-500 hover:bg-primary/10 hover:border-primary/50 hover:-translate-y-4">
+                  <div className="relative w-28 h-28 mx-auto mb-8">
+                    <div className="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative w-full h-full bg-white/5 rounded-full flex items-center justify-center border-2 border-white/20 group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
+                      <i className="fas fa-recycle text-5xl text-white group-hover:text-primary transition-colors duration-500 transform group-hover:scale-110 group-hover:-rotate-12"></i>
+                    </div>
                   </div>
+                  <h3 className="text-2xl font-black text-white mb-4">Coleta de Resíduos</h3>
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-200 transition-colors">
+                    Compromisso ambiental rigoroso. Destinamos seu entulho exclusivamente para usinas de reciclagem licenciadas, emitindo o CTR para sua obra.
+                  </p>
                </div>
-               <div className="group relative h-[450px] rounded-3xl overflow-hidden cursor-pointer shadow-2xl transition-all duration-500 hover:-translate-y-3">
-                  <img src={IMAGES.skipBin} alt="Caçambas Estacionárias" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-8">
-                      <h3 className="text-3xl font-black text-white leading-none mb-2">Caçambas Padrão</h3>
+
+               {/* Item 3: Caçambas */}
+               <div className="group bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-[2.5rem] text-center transition-all duration-500 hover:bg-primary/10 hover:border-primary/50 hover:-translate-y-4">
+                  <div className="relative w-28 h-28 mx-auto mb-8">
+                    <div className="absolute inset-0 bg-primary/20 rounded-full animate-ping opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative w-full h-full bg-white/5 rounded-full flex items-center justify-center border-2 border-white/20 group-hover:border-primary group-hover:scale-110 transition-all duration-500 shadow-xl">
+                      <i className="fas fa-boxes-stacked text-5xl text-white group-hover:text-primary transition-colors duration-500 transform group-hover:translate-y-[-5px]"></i>
+                    </div>
                   </div>
+                  <h3 className="text-2xl font-black text-white mb-4">Caçambas Padrão</h3>
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-200 transition-colors">
+                    Equipamentos conservados, sem vazamentos e com sinalização reflexiva conforme as normas de trânsito. Disponíveis em 3m³, 5m³ e 8m³.
+                  </p>
                </div>
             </div>
           </div>
