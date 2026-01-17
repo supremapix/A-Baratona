@@ -238,11 +238,30 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-        <section className="py-24 bg-white overflow-hidden">
+        {/* Depoimentos Responsivos */}
+        <section className="py-16 sm:py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                  <h2 className="text-4xl md:text-6xl font-black text-secondary mb-6 leading-tight">O que dizem nossos clientes?</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+              <div className="text-center lg:text-left">
+                  <span className="text-primary font-bold tracking-widest uppercase text-xs sm:text-sm mb-2 block">Voz dos Clientes</span>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-secondary mb-6 leading-tight">
+                    O que dizem nossos clientes?
+                  </h2>
+                  <p className="text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0">
+                    Milhares de obras atendidas em Curitiba e Região Metropolitana. Confira a experiência de quem já contratou A Baratona.
+                  </p>
+                  <div className="hidden lg:flex items-center gap-4 text-secondary font-bold">
+                    <div className="flex text-yellow-400 gap-1">
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                      <i className="fas fa-star"></i>
+                    </div>
+                    <span>4.9/5 estrelas no Google</span>
+                  </div>
+              </div>
+              <div className="w-full">
                   <VerticalTestimonials />
               </div>
             </div>
